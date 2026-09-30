@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #172033;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100svh;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 80px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-greeting {
+  margin: 0 0 8px;
+  color: #475569;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.hero-role {
+  margin: 20px 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.hero-description {
+  max-width: 55ch;
+  margin: 16px 0 0;
+  font-size: 1.125rem;
+  color: #475569;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.button-secondary {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.button-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.button-secondary:hover {
+  background-color: #dbeafe;
+}
+
+.button:focus-visible {
+  outline: 3px solid #172033;
+  outline-offset: 4px;
+}
+
+.preloader {
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.intro-title {
+  padding: 24px;
+  text-align: center;
+}
+
+.intro-title p {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.intro-char {
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.letter-face {
+    display: inline-block;
+}
+
+.split-overlay {
+    visibility: hidden;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    display: grid;
+    place-items: center;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.split-overlay p {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
