@@ -21,6 +21,7 @@
     ></script>
     <script src="script.js" defer></script>
     <script src="themes.js"></script>
+    <script src="translations.js" defer></script>
   </head>
 
   <body>
@@ -41,59 +42,140 @@
       hidden
     >
       <div class="menu-row">
-        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html" aria-current="page" data-i18n="nav.home"> Home </a>
       </div>
 
       <div class="menu-row">
-        <a href="about.html">About me</a>
+        <a href="about.html" data-i18n="nav.about">About me</a>
       </div>
 
       <div class="menu-row">
-        <a href="project.html">Projects</a>
+        <a href="project.html" data-i18n="nav.projects">Projects</a>
       </div>
 
       <div class="menu-row">
-        <a href="experience.html">Experiences</a>
+        <a href="experience.html" data-i18n="nav.experience">Experiences</a>
       </div>
 
       <div class="menu-row">
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
     </nav>
 
     <header class="site-header">
       <a href="index.html" class="site-logo" aria-label="Home">WR</a>
 
-      <label class="theme-control">
-        <span>Theme</span>
+      <div class="header-controls">
+        <details class="settings-dropdown" id="language-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.language">
+              Language
+            </span>
 
-        <select id="theme-select">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-          <option value="cupcake">Cupcake</option>
-          <option value="luxury">Luxury</option>
-        </select>
-      </label>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h12M9 3v2M5 5c1 5 4 8 8 10M13 5c-1 5-4 8-8 10" />
+              <path d="m14 21 4-10 4 10M16 17h4" />
+            </svg>
+          </summary>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-controls="site-menu"
-        aria-expanded="false"
-      >
-        Menu
-      </button>
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.language">
+              Language
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="en" />
+              <span lang="en">English</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="fr" />
+              <span lang="fr">Français</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="th" />
+              <span lang="th">ไทย</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <details class="settings-dropdown" id="theme-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 2-2
+                     c0-.5-.2-1-.5-1.4a1.5 1.5 0 0 1 1.1-2.6H17
+                     a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"
+              />
+              <circle cx="7.5" cy="10" r=".8" />
+              <circle cx="10" cy="6.5" r=".8" />
+              <circle cx="14.5" cy="6.5" r=".8" />
+              <circle cx="17" cy="10" r=".8" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="light" />
+              <span class="theme-swatch swatch-light" aria-hidden="true"></span>
+              <span data-i18n="theme.light">Light</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="dark" />
+              <span class="theme-swatch swatch-dark" aria-hidden="true"></span>
+              <span data-i18n="theme.dark">Dark</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="cupcake" />
+              <span
+                class="theme-swatch swatch-cupcake"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.cupcake">Cupcake</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="luxury" />
+              <span
+                class="theme-swatch swatch-luxury"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.luxury">Luxury</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-menu"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+      </div>
     </header>
 
     <main class="website-content">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="hero-greeting">Hello, I'm</p>
+        <p class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</p>
 
         <h1 id="hero-title" aria-label="Weerachai Ruenpim">
           <span class="hero-name" aria-hidden="true">Weerachai Ruenpim</span>
         </h1>
 
-        <p class="hero-role">Full stack developer</p>
+        <p class="hero-role" data-i18n="hero.role">Full-stack developer</p>
 
         <p class="hero-description">
           A short introduction about yourself and the work you would like to do.

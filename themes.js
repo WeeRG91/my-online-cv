@@ -17,22 +17,44 @@
     document.documentElement.dataset.theme = initialTheme;
 
     document.addEventListener("DOMContentLoaded", () => {
-        const selector = document.querySelector("#theme-select");
+        const dropdown = document.querySelector("#theme-dropdown");
+        const trigger = dropdown.querySelector("summary");
+        const choices = dropdown.querySelectorAll(
+            'input[name="theme-choice"]'
+        );
 
-        selector.value = initialTheme;
+        choices.forEach((choice) => {
+            choice.checked = choice.value === initialTheme;
 
-        selector.addEventListener("change", () => {
-            const theme = selector.value;
+            choice.addEventListener("change", () => {
+                if (!choice.checked) return;
 
-            if (!availableThemes.includes(theme)) return;
+                document.documentElement.dataset.theme = choice.value;
 
-            document.documentElement.dataset.theme = theme;
+                try {
+                    localStorage.setItem(storageKey, choice.value);
+                } catch {
+                    // 
+                }
 
-            try {
-                localStorage.setItem(storageKey, theme);
-            } catch {
-                // 
+                // Keep the panel open so arrow keys can compare themes.
+            });
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.open = false;
             }
         });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape" || !dropdown.open) return;
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            dropdown.open = false;
+            trigger.focus();
+        }, true);
     });
 })();

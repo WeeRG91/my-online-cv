@@ -250,10 +250,16 @@ if (window.gsap && !reduceMotion) {
 function setMenuOpen(open) {
   if (open === menuIsOpen) return;
 
+  document.querySelectorAll(".settings-dropdown").forEach((dropdown) => {
+    dropdown.open = false;
+  });
+
   menuIsOpen = open;
 
   menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.textContent = open ? "Close" : "Menu";
+  menuToggle.textContent = window.cvI18n.translate(
+    open ? "menu.close" : "menu.open",
+  );
 
   if (open) {
     if (menu.hidden) {
@@ -298,11 +304,24 @@ document.addEventListener("keydown", (event) => {
   }
 
   if (event.key === "Tab") {
+    const dropdowns = document.querySelectorAll(".settings-dropdown");
+
+    const settingsControls = [...dropdowns].flatMap((dropdown) => {
+      const controls = [dropdown.querySelector("summary")];
+
+      if (dropdown.open) {
+        controls.push(dropdown.querySelector("input:checked"));
+      }
+
+      return controls;
+    });
+
     const controls = [
       ...menu.querySelectorAll("a"),
-      document.querySelector("#theme-select"),
+      ...settingsControls,
       menuToggle,
     ];
+
     const currentIndex = controls.indexOf(document.activeElement);
 
     const nextIndex = event.shiftKey
