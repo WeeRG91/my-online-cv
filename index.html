@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,6 +20,7 @@
       defer
     ></script>
     <script src="script.js" defer></script>
+    <script src="themes.js"></script>
   </head>
 
   <body>
@@ -62,6 +63,17 @@
 
     <header class="site-header">
       <a href="index.html" class="site-logo" aria-label="Home">WR</a>
+
+      <label class="theme-control">
+        <span>Theme</span>
+
+        <select id="theme-select">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="cupcake">Cupcake</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </label>
 
       <button
         class="menu-toggle"
