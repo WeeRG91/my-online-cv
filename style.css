@@ -405,7 +405,7 @@ body {
     justify-content: center;
     gap: 12px;
 
-    padding: 100px 100px 80px;
+    padding: 100px 200px 80px;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: var(--overlay-background);
@@ -471,6 +471,49 @@ body {
 
 .menu-toggle[aria-expanded="true"] .close-icon {
     display: block;
+}
+
+.fullscreen-menu {
+    counter-reset: menu-item;
+    isolation: isolate;
+}
+
+.fullscreen-menu::before {
+    content: "WR";
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
+    z-index: -1;
+
+    font-size: clamp(10rem, 35vw, 32rem);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+
+    color: var(--overlay-text);
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.menu-row {
+    counter-increment: menu-item;
+}
+
+.menu-row a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: clamp(12px, 2vw, 28px);
+}
+
+.menu-row a::before {
+    content: counter(menu-item, decimal-leading-zero);
+    flex-shrink: 0;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+
+    color: var(--overlay-hover);
 }
 
 /* Themes & translations */
