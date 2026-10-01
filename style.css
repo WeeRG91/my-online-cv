@@ -188,7 +188,7 @@ body {
 }
 
 .hero-description {
-  max-width: 55ch;
+  max-width: 900px;
   margin: 16px 0 0;
   font-size: 1.125rem;
   color: var(--muted-color);

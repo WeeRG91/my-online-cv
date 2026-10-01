@@ -8,6 +8,8 @@ const translations = {
 
     "hero.greeting": "Hello, I'm",
     "hero.role": "Full-stack developer",
+    "hero.description":
+      "Software development student based in Belgium, seeking an internship in web and mobile app development for my final-year project. With a background in language teaching and French–Thai translation, I’m bringing a new perspective to my career in technology.",
 
     "settings.language": "Language",
     "settings.theme": "Theme",
@@ -30,6 +32,8 @@ const translations = {
 
     "hero.greeting": "Bonjour, je m'appelle",
     "hero.role": "Développeur full-stack",
+    "hero.description":
+      "Étudiante en développement logiciel en Belgique, je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études. Forte d’une expérience dans l’enseignement des langues et la traduction français–thaï, j’apporte une nouvelle perspective à mon parcours dans la technologie.",
 
     "settings.language": "Langue",
     "settings.theme": "Thème",
@@ -52,6 +56,8 @@ const translations = {
 
     "hero.greeting": "สวัสดีค่ะ ฉันชื่อ",
     "hero.role": "นักพัฒนาเว็บ full-stack",
+    "hero.description":
+      "ฉันกำลังศึกษาด้านการพัฒนาซอฟต์แวร์ในเบลเยียม และกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือเพื่อทำโครงงานจบการศึกษา ด้วยประสบการณ์ด้านการสอนภาษาและการแปลภาษาฝรั่งเศส–ไทย ฉันพร้อมนำมุมมองใหม่มาสู่เส้นทางอาชีพด้านเทคโนโลยี",
 
     "settings.language": "ภาษา",
     "settings.theme": "ธีม",
