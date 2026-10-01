@@ -33,7 +33,47 @@
       <p>WR</p>
     </div>
 
-    <main>
+    <nav
+      id="site-menu"
+      class="fullscreen-menu"
+      aria-label="Main navigation"
+      hidden
+    >
+      <div class="menu-row">
+        <a href="index.html" aria-current="page">Home</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="about.html">About me</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="project.html">Projects</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="experience.html">Experiences</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <header class="site-header">
+      <a href="index.html" class="site-logo" aria-label="Home">WR</a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+    </header>
+
+    <main class="website-content">
       <section class="hero" aria-labelledby="hero-title">
         <p class="hero-greeting">Hello, I'm</p>
 
@@ -46,13 +86,6 @@
         <p class="hero-description">
           A short introduction about yourself and the work you would like to do.
         </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">
-            View my projects
-          </a>
-          <a class="button button-secondary" href="#contact"> Contact me </a>
-        </div>
       </section>
     </main>
   </body>
