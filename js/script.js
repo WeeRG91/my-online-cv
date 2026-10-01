@@ -183,7 +183,7 @@ if (window.gsap && window.SplitText && !reduceMotion) {
         },
         ease: "none",
       },
-      "tearStart",
+      "tearStart+=0.8",
     );
   }
 }
