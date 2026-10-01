@@ -310,7 +310,7 @@ body {
 }
 
 .bubble:nth-child(2) {
-    --size: 80px;
+    --size: 100px;
     --duration: 9s;
     --delay: -6s;
     top: 65%;
@@ -326,7 +326,7 @@ body {
 }
 
 .bubble:nth-child(4) {
-    --size: 110px;
+    --size: 80px;
     --duration: 11s;
     --delay: -2s;
     top: 70%;
@@ -334,7 +334,7 @@ body {
 }
 
 .bubble:nth-child(5) {
-    --size: 60px;
+    --size: 140px;
     --duration: 8s;
     --delay: -4s;
     top: 45%;

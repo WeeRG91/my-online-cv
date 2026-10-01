@@ -113,6 +113,7 @@ if (window.gsap && window.SplitText && !reduceMotion) {
       null,
       "+=0.2",
     )
+    .addLabel("tearStart")
     .to(tear, {
       progress: 100,
       duration: 0.8,
@@ -170,7 +171,7 @@ if (window.gsap && window.SplitText && !reduceMotion) {
     timeline.to(
       heroName,
       {
-        duration: 1.8,
+        duration: 3,
         onStart: () => {
           gsap.set(heroName, { visibility: "visible" });
         },
@@ -178,11 +179,11 @@ if (window.gsap && window.SplitText && !reduceMotion) {
           text: fullName,
           chars: "upperAndLowerCase",
           revealDelay: 0.5,
-          speed: 0.8,
+          speed: 0.5,
         },
         ease: "none",
       },
-      "<",
+      "tearStart",
     );
   }
 }
