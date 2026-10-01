@@ -7,13 +7,12 @@ const reduceMotion = window.matchMedia(
 if (window.gsap && window.SplitText && !reduceMotion) {
   gsap.registerPlugin(SplitText);
 
-const titleSplit = SplitText.create(".intro-title p", {
+  const titleSplit = SplitText.create(".intro-title p", {
     type: "words,chars",
-    charsClass: "intro-char"
-});
+    charsClass: "intro-char",
+  });
 
-
-const letterFaces = titleSplit.chars.map((char) => {
+  const letterFaces = titleSplit.chars.map((char) => {
     const face = document.createElement("span");
 
     face.className = "letter-face";
@@ -22,7 +21,7 @@ const letterFaces = titleSplit.chars.map((char) => {
     char.replaceChildren(face);
 
     return face;
-});
+  });
 
   const firstChar = titleSplit.words[0].querySelector(".intro-char");
   const secondChar = titleSplit.words[1].querySelector(".intro-char");
@@ -158,4 +157,31 @@ const letterFaces = titleSplit.chars.map((char) => {
         });
       },
     });
+
+  if (window.ScrambleTextPlugin) {
+    gsap.registerPlugin(ScrambleTextPlugin);
+
+    const heroName = document.querySelector(".hero-name");
+    const fullName = heroName.textContent.trim();
+
+    gsap.set(heroName, { visibility: "hidden" });
+
+    timeline.to(
+      heroName,
+      {
+        duration: 1.8,
+        onStart: () => {
+          gsap.set(heroName, { visibility: "visible" });
+        },
+        scrambleText: {
+          text: fullName,
+          chars: "upperAndLowerCase",
+          revealDelay: 0.3,
+          speed: 0.5,
+        },
+        ease: "none",
+      },
+      "<",
+    );
+  }
 }
