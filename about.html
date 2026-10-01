@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About me | Weerachai Ruenpim</title>
+
+    <script src="js/themes.js"></script>
+
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/bubbles.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"
+      defer
+    ></script>
+    <script src="js/about.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
+  </head>
+
+  <body>
+    <nav
+      id="site-menu"
+      class="fullscreen-menu"
+      aria-label="Main navigation"
+      hidden
+    >
+      <div class="menu-row">
+        <a href="index.html" data-i18n="nav.home"> Home </a>
+      </div>
+
+      <div class="menu-row">
+        <a href="about.html" aria-current="page" data-i18n="nav.about"
+          >About me</a
+        >
+      </div>
+
+      <div class="menu-row">
+        <a href="project.html" data-i18n="nav.projects">Projects</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="experience.html" data-i18n="nav.experience">Experiences</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="site-header">
+      <div class="header-controls">
+        <details class="settings-dropdown" id="language-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.language">
+              Language
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h12M9 3v2M5 5c1 5 4 8 8 10M13 5c-1 5-4 8-8 10" />
+              <path d="m14 21 4-10 4 10M16 17h4" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.language">
+              Language
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="en" />
+              <span lang="en">English</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="fr" />
+              <span lang="fr">Français</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="th" />
+              <span lang="th">ไทย</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <details class="settings-dropdown" id="theme-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 2-2
+                     c0-.5-.2-1-.5-1.4a1.5 1.5 0 0 1 1.1-2.6H17
+                     a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"
+              />
+              <circle cx="7.5" cy="10" r=".8" />
+              <circle cx="10" cy="6.5" r=".8" />
+              <circle cx="14.5" cy="6.5" r=".8" />
+              <circle cx="17" cy="10" r=".8" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="light" />
+              <span class="theme-swatch swatch-light" aria-hidden="true"></span>
+              <span data-i18n="theme.light">Light</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="dark" />
+              <span class="theme-swatch swatch-dark" aria-hidden="true"></span>
+              <span data-i18n="theme.dark">Dark</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="cupcake" />
+              <span
+                class="theme-swatch swatch-cupcake"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.cupcake">Cupcake</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="luxury" />
+              <span
+                class="theme-swatch swatch-luxury"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.luxury">Luxury</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-menu"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+
+          <svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="website-content">
+      <section class="about-page" aria-labelledby="about-title">
+        <h1 id="about-title">My journey</h1>
+
+        <div class="journey-layout">
+          <svg class="flight-route" aria-hidden="true">
+            <defs>
+              <mask
+                id="flight-trail-mask"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+              >
+                <path
+                  id="flight-trail-reveal"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                ></path>
+              </mask>
+            </defs>
+
+            <path id="flight-path" mask="url(#flight-trail-mask)"></path>
+          </svg>
+
+          <div class="flight-traveler" aria-hidden="true">
+            <img src="images/plane.png" alt="" />
+          </div>
+
+          <div class="journey-location journey-departure">
+            <span class="location-caption">Departure</span>
+            <h2>Thailand</h2>
+            <p>Where my journey began.</p>
+          </div>
+
+          <div class="journey-story">
+            <section class="journey-stop" id="journey-school">
+              <h2>A foundation in languages</h2>
+              <p>
+                I completed the English–French programme at Rattanakosin Somphot
+                Bang Khun Thian School in Thailand.
+              </p>
+            </section>
+
+            <section class="journey-stop" id="journey-bachelor">
+              <h2>Studying French</h2>
+              <p>
+                I earned a bachelor’s degree with a major in French at Silpakorn
+                University.
+              </p>
+            </section>
+
+            <section class="journey-stop" id="journey-master">
+              <h2>Connecting languages and cultures</h2>
+              <p>
+                I continued my studies at Thammasat University, earning a
+                master’s degree in French–Thai translation.
+              </p>
+            </section>
+
+            <section class="journey-stop" id="journey-belgium">
+              <h2>A new chapter in Belgium</h2>
+              <p>
+                After completing my studies in Thailand, I moved to Belgium and
+                began a new chapter.
+              </p>
+            </section>
+
+            <section class="journey-stop" id="journey-development">
+              <h2>My next destination: software development</h2>
+              <p>
+                I’m now studying for a Bachelier en informatique, orientation
+                développement d’applications, at Établissement d’Enseignement
+                pour Adultes &amp; de Formation Continue (Sud-Luxembourg).
+              </p>
+              <p>
+                I’m seeking an internship in web and mobile app development for
+                my final-year project.
+              </p>
+            </section>
+          </div>
+
+          <div class="journey-location journey-arrival">
+            <span class="location-caption">Destination</span>
+            <h2>Belgium</h2>
+            <p>A new chapter in software development.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
