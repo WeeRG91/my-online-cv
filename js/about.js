@@ -191,6 +191,38 @@
 
   reduceMotion.addEventListener("change", scheduleFlightUpdate);
 
+  if ("IntersectionObserver" in window && !reduceMotion.matches) {
+    const storyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          storyObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -8% 0px",
+      },
+    );
+
+    stops.forEach((stop) => {
+      stop.classList.add("story-reveal");
+      storyObserver.observe(stop);
+    });
+
+    reduceMotion.addEventListener("change", (event) => {
+      if (!event.matches) return;
+
+      stops.forEach((stop) => {
+        stop.classList.add("is-visible");
+      });
+
+      storyObserver.disconnect();
+    });
+  }
+
   observer.observe(layout);
   drawRoute();
 })();
