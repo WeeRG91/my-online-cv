@@ -1,0 +1,62 @@
+/* Hero styles */
+
+.hero {
+min-height: 100svh;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 80px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-greeting {
+margin: 0 0 8px;
+  color: var(--muted-color);
+}
+
+.hero h1 {
+margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.hero-role {
+margin: 20px 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.hero-description {
+max-width: 900px;
+  margin: 16px 0 0;
+  font-size: 1.125rem;
+  color: var(--muted-color);
+}
+
+.hero-actions {
+display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.website-content {
+isolation: isolate;
+}
+
+.hero {
+position: relative;
+    z-index: 1;
+}
+
+.website-content {
+position: relative;
+    z-index: 1;
+    background-color: var(--page-background);
+    transform-origin: center;
+}

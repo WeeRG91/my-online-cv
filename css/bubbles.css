@@ -1,0 +1,114 @@
+/* Bubbles styles */
+
+.floating-bubbles {
+position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at 28% 22%,
+            rgb(255 255 255 / 75%) 0%,
+            rgb(255 255 255 / 15%) 12%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 65% 75%,
+            var(--accent-color),
+            transparent 65%
+        ),
+        radial-gradient(
+            circle at 40% 35%,
+            transparent 35%,
+            var(--accent-soft) 75%,
+            var(--accent-color) 100%
+        );
+
+    box-shadow:
+        inset 3px 3px 8px rgb(255 255 255 / 45%),
+        inset -8px -12px 20px rgb(0 0 0 / 18%),
+        0 8px 24px rgb(0 0 0 / 8%);
+
+    opacity: 0.4;
+
+    animation: bubble-float var(--duration) ease-in-out infinite alternate;
+    animation-delay: var(--delay);
+}
+
+.bubble::before {
+content: "";
+    position: absolute;
+    top: 14%;
+    left: 18%;
+    width: 35%;
+    height: 18%;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 65%);
+    filter: blur(3px);
+    transform: rotate(-35deg);
+}
+
+.bubble:nth-child(1) {
+--size: 160px;
+    --duration: 12s;
+    --delay: -3s;
+    top: 15%;
+    left: 8%;
+}
+
+.bubble:nth-child(2) {
+--size: 100px;
+    --duration: 9s;
+    --delay: -6s;
+    top: 65%;
+    left: 20%;
+}
+
+.bubble:nth-child(3) {
+--size: 220px;
+    --duration: 15s;
+    --delay: -8s;
+    top: 20%;
+    right: 8%;
+}
+
+.bubble:nth-child(4) {
+--size: 80px;
+    --duration: 11s;
+    --delay: -2s;
+    top: 70%;
+    right: 25%;
+}
+
+.bubble:nth-child(5) {
+--size: 140px;
+    --duration: 8s;
+    --delay: -4s;
+    top: 45%;
+    right: 40%;
+}
+
+@keyframes bubble-float {
+from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(25px, -45px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.bubble {
+animation: none;
+}
+}

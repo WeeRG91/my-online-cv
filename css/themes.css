@@ -1,0 +1,93 @@
+/* Themes styles */
+
+:root {
+color-scheme: light;
+
+    --page-background: #f8fafc;
+    --text-color: #172033;
+    --muted-color: #475569;
+
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-soft: #dbeafe;
+    --on-accent: #ffffff;
+
+    --header-background: #172033;
+    --header-text: #ffffff;
+
+    --overlay-background: #0a0a0a;
+    --overlay-text: #ffffff;
+    --overlay-hover: #93c5fd;
+
+    --focus-color: #172033;
+    --overlay-focus: #60a5fa;
+}
+
+html[data-theme="dark"] {
+color-scheme: dark;
+
+    --page-background: #111827;
+    --text-color: #f8fafc;
+    --muted-color: #cbd5e1;
+
+    --accent-color: #93c5fd;
+    --accent-hover: #bfdbfe;
+    --accent-soft: #1e3a5f;
+    --on-accent: #111827;
+
+    --header-background: #334155;
+    --header-text: #f8fafc;
+
+    --overlay-background: #030712;
+    --overlay-text: #f8fafc;
+    --overlay-hover: #93c5fd;
+
+    --focus-color: #93c5fd;
+    --overlay-focus: #93c5fd;
+}
+
+html[data-theme="cupcake"] {
+color-scheme: light;
+
+    --page-background: #fff7fb;
+    --text-color: #442b3b;
+    --muted-color: #705569;
+
+    --accent-color: #a83268;
+    --accent-hover: #872650;
+    --accent-soft: #fce0ed;
+    --on-accent: #ffffff;
+
+    --header-background: #f5d5e5;
+    --header-text: #442b3b;
+
+    --overlay-background: #f5e4ef;
+    --overlay-text: #442b3b;
+    --overlay-hover: #a83268;
+
+    --focus-color: #a83268;
+    --overlay-focus: #a83268;
+}
+
+html[data-theme="luxury"] {
+color-scheme: dark;
+
+    --page-background: #352b19;
+    --text-color: #faf5e9;
+    --muted-color: #c9bea8;
+
+    --accent-color: #d8b76a;
+    --accent-hover: #ebcd88;
+    --accent-soft: #352b19;
+    --on-accent: #141210;
+
+    --header-background: #d8b76a;
+    --header-text: #141210;
+
+    --overlay-background: #090807;
+    --overlay-text: #e8cd91;
+    --overlay-hover: #ffffff;
+
+    --focus-color: #d8b76a;
+    --overlay-focus: #d8b76a;
+}

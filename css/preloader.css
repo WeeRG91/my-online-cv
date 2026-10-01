@@ -1,0 +1,53 @@
+/* Preloader styles */
+
+.preloader {
+visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background-color: var(--overlay-background);
+  color: var(--overlay-text);
+  pointer-events: none;
+}
+
+.intro-title {
+padding: 24px;
+  text-align: center;
+}
+
+.intro-title p {
+margin: 0;
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.intro-char {
+overflow: hidden;
+    vertical-align: bottom;
+}
+
+.letter-face {
+display: inline-block;
+}
+
+.split-overlay {
+visibility: hidden;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    display: grid;
+    place-items: center;
+    background-color: var(--overlay-background);
+    color: var(--overlay-text);
+    pointer-events: none;
+}
+
+.split-overlay p {
+margin: 0;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
