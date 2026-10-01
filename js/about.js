@@ -15,6 +15,9 @@
 
   const departure = layout.querySelector(".journey-departure");
   const arrival = layout.querySelector(".journey-arrival");
+  const departureMap = departure.querySelector(".country-map");
+  const arrivalMap = arrival.querySelector(".country-map");
+
   const stops = [...layout.querySelectorAll(".journey-stop")];
 
   function updateFlight() {
@@ -81,6 +84,18 @@
     traveler.style.left = `${point.x}px`;
     traveler.style.top = `${point.y}px`;
 
+    const flightProgress = distance / routeLength;
+
+    const takeoff = Math.min(1, flightProgress / 0.12);
+    const landing = Math.min(1, (1 - flightProgress) / 0.12);
+
+    const sizeProgress = Math.min(takeoff, landing);
+
+    const easedSize = sizeProgress * sizeProgress * (3 - 2 * sizeProgress);
+    const scale = 0.35 + easedSize * 0.65;
+
+    traveler.style.transform = `translate(-50%, -50%) scale(${scale})`;
+
     const before = path.getPointAtLength(Math.max(0, distance - 4));
 
     const after = path.getPointAtLength(Math.min(routeLength, distance + 4));
@@ -100,6 +115,21 @@
     flightFrame = requestAnimationFrame(updateFlight);
   }
 
+  function getMapPoint(image) {
+    const imageBounds = image.getBoundingClientRect();
+    const layoutBounds = layout.getBoundingClientRect();
+
+    const scaleX = layoutBounds.width / layout.clientWidth;
+    const scaleY = layoutBounds.height / layout.offsetHeight;
+
+    return {
+      x:
+        (imageBounds.left - layoutBounds.left + imageBounds.width / 2) / scaleX,
+
+      y: (imageBounds.top - layoutBounds.top + imageBounds.height / 2) / scaleY,
+    };
+  }
+
   function drawRoute() {
     const width = layout.clientWidth;
     const height = layout.offsetHeight;
@@ -108,10 +138,7 @@
     svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
 
     const points = [
-      {
-        x: departure.offsetLeft + departure.offsetWidth / 2,
-        y: departure.offsetTop + departure.offsetHeight + 12,
-      },
+      getMapPoint(departureMap),
 
       ...stops.map((stop, index) => ({
         x: mobile ? 32 : width * (index % 2 === 0 ? 0.75 : 0.25),
@@ -119,10 +146,7 @@
         y: stop.offsetTop + stop.offsetHeight / 2,
       })),
 
-      {
-        x: arrival.offsetLeft + arrival.offsetWidth / 2,
-        y: arrival.offsetTop - 12,
-      },
+      getMapPoint(arrivalMap),
     ];
 
     let route = `M ${points[0].x} ${points[0].y}`;
