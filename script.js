@@ -257,8 +257,9 @@ function setMenuOpen(open) {
   menuIsOpen = open;
 
   menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.textContent = window.cvI18n.translate(
-    open ? "menu.close" : "menu.open",
+  menuToggle.setAttribute(
+    "aria-label",
+    window.cvI18n.translate(open ? "menu.close" : "menu.open"),
   );
 
   if (open) {

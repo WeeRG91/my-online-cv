@@ -94,7 +94,10 @@ const translations = {
     const button = document.querySelector(".menu-toggle");
     const open = button.getAttribute("aria-expanded") === "true";
 
-    button.textContent = translate(open ? "menu.close" : "menu.open");
+    button.setAttribute(
+      "aria-label",
+      translate(open ? "menu.close" : "menu.open"),
+    );
   }
 
   window.cvI18n = { translate };
@@ -104,7 +107,7 @@ const translations = {
   try {
     savedLanguage = localStorage.getItem(storageKey) || "en";
   } catch {
-    // Switching still works without storage.
+    //
   }
 
   applyLanguage(savedLanguage);
@@ -118,7 +121,7 @@ const translations = {
       try {
         localStorage.setItem(storageKey, currentLanguage);
       } catch {
-        // The language still applies for this visit.
+        //
       }
     });
   });

@@ -532,3 +532,33 @@ html[lang="th"] .menu-row a {
 .swatch-luxury {
     background: linear-gradient(135deg, #141210 50%, #d8b76a 50%);
 }
+
+.menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+}
+
+.menu-toggle svg {
+    grid-area: 1 / 1;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+}
+
+.menu-toggle .close-icon {
+    display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-icon {
+    display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .close-icon {
+    display: block;
+}
