@@ -192,7 +192,6 @@ if (window.gsap && window.SplitText && !reduceMotion) {
 const menu = document.querySelector("#site-menu");
 const menuToggle = document.querySelector(".menu-toggle");
 const pageContent = document.querySelector(".website-content");
-const siteLogo = document.querySelector(".site-logo");
 
 let menuIsOpen = false;
 let previousOverflow = "";
@@ -200,7 +199,6 @@ let previousOverflow = "";
 function finishMenuClose() {
   menu.hidden = true;
   pageContent.inert = false;
-  siteLogo.inert = false;
   document.body.style.overflow = previousOverflow;
 }
 
@@ -271,7 +269,6 @@ function setMenuOpen(open) {
     menu.hidden = false;
     menu.inert = false;
     pageContent.inert = true;
-    siteLogo.inert = true;
     document.body.style.overflow = "hidden";
 
     if (menuTimeline) {
