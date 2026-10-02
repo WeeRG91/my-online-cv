@@ -1,5 +1,5 @@
 (() => {
-    const availableThemes = ["light", "dark", "cupcake", "luxury"];
+    const availableThemes = ["light", "dark", "candies", "luxury"];
     const storageKey = "cv-theme";
 
     let savedTheme = "light";
@@ -36,8 +36,6 @@
                 } catch {
                     // 
                 }
-
-                // Keep the panel open so arrow keys can compare themes.
             });
         });
 

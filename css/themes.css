@@ -44,7 +44,7 @@ color-scheme: dark;
     --overlay-focus: #93c5fd;
 }
 
-html[data-theme="cupcake"] {
+html[data-theme="candies"] {
 color-scheme: light;
 
     --page-background: #fff7fb;
@@ -76,7 +76,7 @@ color-scheme: dark;
 
     --accent-color: #d8b76a;
     --accent-hover: #ebcd88;
-    --accent-soft: #352b19;
+    --accent-soft: #594725;
     --on-accent: #141210;
 
     --header-background: #d8b76a;

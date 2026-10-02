@@ -415,7 +415,7 @@
   --cloud-opacity: 0.6;
 }
 
-html[data-theme="cupcake"] {
+html[data-theme="candies"] {
   --cloud-bright: #f0dce9;
   --cloud-soft: #dec2d5;
   --cloud-shade: rgb(150 105 135 / 30%);

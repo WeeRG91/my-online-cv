@@ -7,9 +7,7 @@
   const previewList = gallery.querySelector(".minimap-img-preview");
   const infoList = gallery.querySelector(".minimap-info-list");
   const menuButton = document.querySelector(".menu-toggle");
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  );
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const entries = new Map();
 
@@ -50,7 +48,21 @@
     preview.className = "minimap-img-item";
     preview.setAttribute("aria-hidden", "true");
     const previewImage = makeImage(project, true);
+    previewImage.className = "project-web-preview";
     preview.append(previewImage);
+
+    if (project.mobileImage) {
+      preview.classList.add("has-mobile-preview");
+
+      const mobileImage = document.createElement("img");
+      mobileImage.src = project.mobileImage;
+      mobileImage.alt = "";
+      mobileImage.className = "project-mobile-preview";
+      mobileImage.draggable = false;
+
+      preview.append(mobileImage);
+    }
+
     previewList.append(preview);
 
     const info = document.createElement("article");
@@ -108,23 +120,18 @@
       const mainHeight = stage.clientHeight;
       const previewHeight = previewList.clientHeight;
 
-      entry.main.style.transform =
-        `translateY(${offset * mainHeight}px)`;
+      entry.main.style.transform = `translateY(${offset * mainHeight}px)`;
 
-      entry.preview.style.transform =
-        `translateY(${offset * previewHeight}px)`;
+      entry.preview.style.transform = `translateY(${offset * previewHeight}px)`;
 
-      entry.info.style.transform =
-        `translateY(${offset * infoList.clientHeight}px)`;
+      entry.info.style.transform = `translateY(${offset * infoList.clientHeight}px)`;
 
       const parallax = reduceMotion.matches ? 0 : -offset * 0.15;
       const scale = reduceMotion.matches ? 1 : 1.3;
 
-      entry.mainImage.style.transform =
-        `translateY(${parallax * mainHeight}px) scale(${scale})`;
+      entry.mainImage.style.transform = `translateY(${parallax * mainHeight}px) scale(${scale})`;
 
-      entry.previewImage.style.transform =
-        `translateY(${parallax * previewHeight}px) scale(${scale})`;
+      entry.previewImage.style.transform = "none";
 
       const inactive = index !== center;
       entry.main.setAttribute("aria-hidden", String(inactive));
@@ -204,10 +211,7 @@
             ? stage.clientHeight
             : 1;
 
-      const delta = Math.max(
-        -150,
-        Math.min(150, event.deltaY * unit),
-      );
+      const delta = Math.max(-150, Math.min(150, event.deltaY * unit));
 
       moveBy((delta * 0.75) / stage.clientHeight);
     },

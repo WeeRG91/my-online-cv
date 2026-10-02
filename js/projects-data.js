@@ -3,6 +3,7 @@ const portfolioProjects = [
     id: "food-order",
     title: "Food Order App",
     image: "images/projects/food-order-app.png",
+    mobileImage: "images/projects/food-order-mobile-app.jpg",
     imageAlt: "Food ordering web application showing its soup selection",
     category: "Final-year project",
     description:
