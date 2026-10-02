@@ -453,3 +453,23 @@ html[data-theme="luxury"] {
     transition: none;
   }
 }
+
+#journey-belgium {
+    position: relative;
+    min-height: max(60svh, 520px);
+}
+
+.journey-belgium-map {
+    position: absolute;
+    top: 0;
+    left: calc(-100% - 64px);
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .journey-belgium-map {
+        position: static;
+        width: 100%;
+        margin: 32px 0 0;
+    }
+}

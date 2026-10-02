@@ -11,12 +11,17 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   let routeLength = 0;
+  let belgiumDistance = 0;
+  let currentVehicle = "plane";
+  const carPreview = new Image();
+  carPreview.src = "images/car.png";
   let flightFrame;
 
   const departure = layout.querySelector(".journey-departure");
   const arrival = layout.querySelector(".journey-arrival");
   const departureMap = departure.querySelector(".country-map");
   const arrivalMap = arrival.querySelector(".country-map");
+  const belgiumMap = layout.querySelector(".country-map-belgium");
 
   const stops = [...layout.querySelectorAll(".journey-stop")];
 
@@ -84,11 +89,28 @@
     traveler.style.left = `${point.x}px`;
     traveler.style.top = `${point.y}px`;
 
-    const flightProgress = distance / routeLength;
+    const driving = distance >= belgiumDistance;
 
-    const takeoff = Math.min(1, flightProgress / 0.12);
-    const landing = Math.min(1, (1 - flightProgress) / 0.12);
+    const nextVehicle = driving ? "car" : "plane";
 
+    if (nextVehicle !== currentVehicle) {
+      travelerImage.src = driving ? "images/car.png" : "images/plane.png";
+
+      currentVehicle = nextVehicle;
+    }
+
+    const segmentStart = driving ? belgiumDistance : 0;
+    const segmentLength = driving
+      ? routeLength - belgiumDistance
+      : belgiumDistance;
+
+    const segmentProgress = Math.min(
+      1,
+      Math.max(0, (distance - segmentStart) / Math.max(1, segmentLength)),
+    );
+
+    const takeoff = Math.min(1, segmentProgress / 0.12);
+    const landing = Math.min(1, (1 - segmentProgress) / 0.12);
     const sizeProgress = Math.min(takeoff, landing);
 
     const easedSize = sizeProgress * sizeProgress * (3 - 2 * sizeProgress);
@@ -116,18 +138,17 @@
   }
 
   function getMapPoint(image) {
-    const imageBounds = image.getBoundingClientRect();
-    const layoutBounds = layout.getBoundingClientRect();
+    let x = image.offsetWidth / 2;
+    let y = image.offsetHeight / 2;
+    let element = image;
 
-    const scaleX = layoutBounds.width / layout.clientWidth;
-    const scaleY = layoutBounds.height / layout.offsetHeight;
+    while (element && element !== layout) {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    }
 
-    return {
-      x:
-        (imageBounds.left - layoutBounds.left + imageBounds.width / 2) / scaleX,
-
-      y: (imageBounds.top - layoutBounds.top + imageBounds.height / 2) / scaleY,
-    };
+    return { x, y };
   }
 
   function drawRoute() {
@@ -140,11 +161,17 @@
     const points = [
       getMapPoint(departureMap),
 
-      ...stops.map((stop, index) => ({
+      ...stops.slice(0, 3).map((stop, index) => ({
         x: mobile ? 32 : width * (index % 2 === 0 ? 0.75 : 0.25),
-
         y: stop.offsetTop + stop.offsetHeight / 2,
       })),
+
+      getMapPoint(belgiumMap),
+
+      {
+        x: mobile ? 32 : width * 0.75,
+        y: stops[4].offsetTop + stops[4].offsetHeight / 2,
+      },
 
       getMapPoint(arrivalMap),
     ];
@@ -156,14 +183,15 @@
       const next = points[index];
       const middleY = (previous.y + next.y) / 2;
 
-      route += ` C
-                ${previous.x} ${middleY},
-                ${next.x} ${middleY},
-                ${next.x} ${next.y}`;
+      route += ` C ${previous.x} ${middleY}, ${next.x} ${middleY}, ${next.x} ${next.y}`;
+
+      if (index === 4) {
+        path.setAttribute("d", route);
+        belgiumDistance = path.getTotalLength();
+      }
     }
 
     path.setAttribute("d", route);
-
     reveal.setAttribute("d", route);
 
     mask.setAttribute("width", width);
