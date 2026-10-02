@@ -44,7 +44,7 @@ const translations = {
 
     "theme.light": "Light",
     "theme.dark": "Dark",
-    "theme.cupcake": "Cupcake",
+    "theme.cupcake": "Pinky",
     "theme.luxury": "Luxury",
 
     "menu.open": "Menu",
@@ -98,7 +98,7 @@ const translations = {
 
     "theme.light": "Clair",
     "theme.dark": "Sombre",
-    "theme.cupcake": "Cupcake",
+    "theme.cupcake": "Pinky",
     "theme.luxury": "Luxury",
 
     "menu.open": "Menu",
@@ -148,9 +148,9 @@ const translations = {
     "settings.language": "ภาษา",
     "settings.theme": "ธีม",
 
-    "theme.light": "สว่าง",
-    "theme.dark": "มืด",
-    "theme.cupcake": "Cupcake",
+    "theme.light": "Light",
+    "theme.dark": "Dark",
+    "theme.cupcake": "Pinky",
     "theme.luxury": "Luxury",
 
     "menu.open": "เมนู",
