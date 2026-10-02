@@ -1,5 +1,33 @@
 const translations = {
   en: {
+    "about.pageTitle": "About me | Weerachai Ruenpim",
+    "about.title": "My journey",
+    "about.departure": "Departure",
+    "about.thailand": "Thailand",
+    "about.departureDescription": "Where my journey began.",
+    "about.schoolTitle": "A foundation in languages",
+    "about.schoolDescription":
+      "I completed the English–French programme at Rattanakosin Somphot Bang Khun Thian School in Bangkok, Thailand.",
+    "about.bachelorTitle": "Studying French",
+    "about.bachelorDescription":
+      "I earned a bachelor’s degree with a major in French at Silpakorn University in Bangkok, Thailand.",
+    "about.masterTitle": "Connecting languages and cultures",
+    "about.masterDescription":
+      "I continued my studies at Thammasat University in Bangkok, Thailand, earning a master’s degree in French–Thai translation.",
+    "about.belgiumTitle": "A new chapter in Belgium",
+    "about.belgiumDescription":
+      "After completing my studies in Thailand, I moved to Belgium and began a new chapter.",
+    "about.arrival": "Arrival",
+    "about.belgium": "Belgium",
+    "about.developmentTitle": "My next destination: software development",
+    "about.developmentDescription":
+      "I am currently pursuing a bachelor’s degree in computer science, specializing in application development, at EAFC-Sudlux.",
+    "about.internshipDescription":
+      "I’m seeking an internship in web and mobile app development for my final-year project.",
+    "about.lookingAhead": "Looking ahead",
+    "about.luxembourg": "Luxembourg",
+    "about.futureDescription": "Future opportunities in software development.",
+
     "nav.home": "Home",
     "nav.about": "About me",
     "nav.projects": "Projects",
@@ -24,6 +52,36 @@ const translations = {
   },
 
   fr: {
+    "about.pageTitle": "À propos | Weerachai Ruenpim",
+    "about.title": "Mon parcours",
+    "about.departure": "Départ",
+    "about.thailand": "Thaïlande",
+    "about.departureDescription": "Là où mon parcours a commencé.",
+    "about.schoolTitle": "Des bases solides en langues",
+    "about.schoolDescription":
+      "J’ai terminé mes études secondaires dans le programme anglais–français de l’école Rattanakosin Somphot Bang Khun Thian, à Bangkok, en Thaïlande.",
+    "about.bachelorTitle": "Étudier le français",
+    "about.bachelorDescription":
+      "J’ai obtenu un bachelier avec une spécialisation en français à l’Université Silpakorn, à Bangkok, en Thaïlande.",
+    "about.masterTitle": "Relier les langues et les cultures",
+    "about.masterDescription":
+      "J’ai poursuivi mes études à l’université Thammasat, à Bangkok, en Thaïlande, où j’ai obtenu un master en traduction français–thaï.",
+    "about.belgiumTitle": "Un nouveau chapitre en Belgique",
+    "about.belgiumDescription":
+      "Après avoir terminé mes études en Thaïlande, je me suis installée en Belgique pour commencer un nouveau chapitre de ma vie.",
+    "about.arrival": "Arrivée",
+    "about.belgium": "Belgique",
+    "about.developmentTitle":
+      "Ma prochaine destination : le développement logiciel",
+    "about.developmentDescription":
+      "Je prépare actuellement un bachelier en informatique, orientation développement d’applications, à EAFC-Sudlux.",
+    "about.internshipDescription":
+      "Je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études.",
+    "about.lookingAhead": "Vers l’avenir",
+    "about.luxembourg": "Luxembourg",
+    "about.futureDescription":
+      "De futures opportunités dans le développement logiciel.",
+
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "nav.projects": "Projets",
@@ -48,6 +106,34 @@ const translations = {
   },
 
   th: {
+    "about.pageTitle": "เกี่ยวกับฉัน | Weerachai Ruenpim",
+    "about.title": "เส้นทางของฉัน",
+    "about.departure": "จุดเริ่มต้น",
+    "about.thailand": "ประเทศไทย",
+    "about.departureDescription": "จุดเริ่มต้นของเส้นทางของฉัน",
+    "about.schoolTitle": "พื้นฐานด้านภาษา",
+    "about.schoolDescription":
+      "ฉันสำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย แผนการเรียนอังกฤษ–ฝรั่งเศส จากโรงเรียนรัตนโกสินทร์สมโภชบางขุนเทียน กรุงเทพมหานคร ประเทศไทย",
+    "about.bachelorTitle": "การศึกษาด้านภาษาฝรั่งเศส",
+    "about.bachelorDescription":
+      "ฉันสำเร็จการศึกษาระดับปริญญาตรี วิชาเอกภาษาฝรั่งเศส จากมหาวิทยาลัยศิลปากร กรุงเทพมหานคร ประเทศไทย",
+    "about.masterTitle": "เชื่อมโยงภาษาและวัฒนธรรม",
+    "about.masterDescription":
+      "ฉันศึกษาต่อที่มหาวิทยาลัยธรรมศาสตร์ กรุงเทพมหานคร ประเทศไทย และสำเร็จการศึกษาระดับปริญญาโทด้านการแปลภาษาฝรั่งเศส–ไทย",
+    "about.belgiumTitle": "บทใหม่ของชีวิตในเบลเยียม",
+    "about.belgiumDescription":
+      "หลังจากสำเร็จการศึกษาในประเทศไทย ฉันย้ายมาอยู่ที่ประเทศเบลเยียมและเริ่มต้นบทใหม่ของชีวิต",
+    "about.arrival": "จุดหมายปลายทาง",
+    "about.belgium": "ประเทศเบลเยียม",
+    "about.developmentTitle": "จุดหมายต่อไปของฉัน: การพัฒนาซอฟต์แวร์",
+    "about.developmentDescription":
+      "ปัจจุบันฉันกำลังศึกษาระดับปริญญาตรีด้านวิทยาการคอมพิวเตอร์ โดยเน้นการพัฒนาแอปพลิเคชัน ที่ EAFC-Sudlux",
+    "about.internshipDescription":
+      "ฉันกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือ เพื่อทำโครงงานจบการศึกษา",
+    "about.lookingAhead": "มองไปสู่อนาคต",
+    "about.luxembourg": "ประเทศลักเซมเบิร์ก",
+    "about.futureDescription": "โอกาสในอนาคตด้านการพัฒนาซอฟต์แวร์",
+
     "nav.home": "หน้าแรก",
     "nav.about": "เกี่ยวกับฉัน",
     "nav.projects": "ผลงาน",
