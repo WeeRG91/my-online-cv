@@ -70,14 +70,22 @@
 
     const category = document.createElement("p");
     category.className = "project-category";
-    category.textContent = project.category;
+    category.dataset.i18n = project.categoryKey;
+    category.textContent =
+      window.cvI18n?.translate(project.categoryKey) ?? project.category;
 
     const title = document.createElement("h2");
     title.textContent = project.title;
 
     const description = document.createElement("p");
     description.className = "project-description";
-    description.textContent = project.description;
+    if (project.descriptionKey) {
+      description.dataset.i18n = project.descriptionKey;
+      description.textContent =
+        window.cvI18n?.translate(project.descriptionKey) ?? project.description;
+    } else {
+      description.textContent = project.description;
+    }
 
     const technologies = document.createElement("ul");
     technologies.className = "project-technologies";
@@ -298,6 +306,12 @@
     clearTimeout(snapTimer);
     target = Math.round(target);
     startAnimation();
+  });
+
+  document.addEventListener("cv:languagechange", () => {
+    infoList.querySelectorAll("[data-i18n]").forEach((element) => {
+      element.textContent = window.cvI18n.translate(element.dataset.i18n);
+    });
   });
 
   render();

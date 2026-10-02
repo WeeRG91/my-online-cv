@@ -1,13 +1,15 @@
 const portfolioProjects = [
   {
     id: "food-order",
-    title: "Food Order App",
+    title: "Kin Dee - Food Order App",
     image: "images/projects/food-order-app.png",
     mobileImage: "images/projects/food-order-mobile-app.jpg",
     imageAlt: "Food ordering web application showing its soup selection",
     category: "Final-year project",
+    categoryKey: "projects.finalYear",
     description:
       "A food ordering platform developed for my final-year project. I built the administration panel, customer web application, and customer mobile application, connected through a shared Laravel backend.",
+    descriptionKey: "projects.foodOrder.description",
     technologies: [
       "Laravel",
       "Vue",
@@ -22,12 +24,14 @@ const portfolioProjects = [
   },
   {
     id: "collectors-clubs",
-    title: "Collectors’ Clubs",
+    title: "CCGB ASBL - Collectors’ Clubs",
     image: "images/projects/clubs-collectionneurs-app.png",
     imageAlt: "Collectors’ clubs web application",
     category: "School project",
+    categoryKey: "projects.school",
     description:
       "A web application developed as a school project for a collectors’ association. It brings together clubs, collections, and collectible items, with features for sales, exchanges, and events, alongside administration tools.",
+    descriptionKey: "projects.collectors.description",
     technologies: [
       "Laravel",
       "Vue",
@@ -39,12 +43,14 @@ const portfolioProjects = [
   },
   {
     id: "temperature-monitoring",
-    title: "Temperature Monitoring",
+    title: "FrigoMonitor - Temperature Monitoring",
     image: "images/projects/surveillance-temperature-app.png",
     imageAlt: "Refrigeration temperature monitoring application",
     category: "School project",
+    categoryKey: "projects.school",
     description:
       "A web application developed as a database course project to monitor refrigeration equipment. It manages equipment and locations, records temperature readings, flags readings outside defined limits, and displays temperature history through charts. A Vue interface connects to a Laravel API, with a stored procedure used when recording readings.",
+    descriptionKey: "projects.temperature.description",
     technologies: [
       "Laravel",
       "Vue",
@@ -56,12 +62,14 @@ const portfolioProjects = [
   },
   {
     id: "administrative-dossiers",
-    title: "Administrative Dossier Management",
+    title: "LUXWorkflow - Dossier Management",
     image: "images/projects/gestion-dossier-administratif-app.png",
     imageAlt: "Administrative dossier management application",
     category: "School project",
+    categoryKey: "projects.school",
     description:
       "A web application developed as a school project to manage administrative dossiers through approval, processing, closure, and archiving stages. It brings together documents, departments, and participants, with role-based access and a history of changes. The application separates its interface, business logic, domain entities, and database persistence.",
+    descriptionKey: "projects.dossiers.description",
     technologies: [
       "C#",
       "ASP.NET Core",
@@ -74,12 +82,14 @@ const portfolioProjects = [
   },
   {
     id: "reactivities",
-    title: "Reactivities — Event Management",
+    title: "Reactivities - Event Management",
     image: "images/projects/event-management-app.png",
     imageAlt: "Reactivities event management application",
     category: "School project",
+    categoryKey: "projects.school",
     description:
       "An event management application with a React frontend and an ASP.NET Core API. Users can browse, create, and join activities, manage their profiles and photos, and follow other members. Event hosts can edit or delete their activities.",
+    descriptionKey: "projects.reactivities.description",
     technologies: [
       "C#",
       "ASP.NET Core",

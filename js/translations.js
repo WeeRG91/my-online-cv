@@ -28,16 +28,29 @@ const translations = {
     "about.luxembourg": "Luxembourg",
     "about.futureDescription": "Future opportunities in software development.",
 
+    "hero.greeting": "Hello, I'm",
+    "hero.role": "Full-stack developer",
+    "hero.description":
+      "Software development student based in Belgium, seeking an internship in web and mobile app development for my final-year project. With a background in language teaching and French–Thai translation, I’m bringing a new perspective to my career in technology.",
+
     "nav.home": "Home",
     "nav.about": "About me",
     "nav.projects": "Projects",
     "nav.experience": "Experience",
     "nav.contact": "Contact",
 
-    "hero.greeting": "Hello, I'm",
-    "hero.role": "Full-stack developer",
-    "hero.description":
-      "Software development student based in Belgium, seeking an internship in web and mobile app development for my final-year project. With a background in language teaching and French–Thai translation, I’m bringing a new perspective to my career in technology.",
+    "projects.school": "School project",
+    "projects.finalYear": "Final-year project",
+    "projects.foodOrder.description":
+      "A food ordering platform developed for my final-year project. I built the administration panel, customer web application, and customer mobile application, connected through a shared Laravel backend.",
+    "projects.collectors.description":
+      "A web application developed as a school project for a collectors’ association. It brings together clubs, collections, and collectible items, with features for sales, exchanges, and events, alongside administration tools.",
+    "projects.temperature.description":
+      "A web application developed as a database course project to monitor refrigeration equipment. It manages equipment and locations, records temperature readings, flags readings outside defined limits, and displays temperature history through charts. A Vue interface connects to a Laravel API, with a stored procedure used when recording readings.",
+    "projects.dossiers.description":
+      "A web application developed as a school project to manage administrative dossiers through approval, processing, closure, and archiving stages. It brings together documents, departments, and participants, with role-based access and a history of changes. The application separates its interface, business logic, domain entities, and database persistence.",
+    "projects.reactivities.description":
+      "An event management application with a React frontend and an ASP.NET Core API. Users can browse, create, and join activities, manage their profiles and photos, and follow other members. Event hosts can edit or delete their activities.",
 
     "settings.language": "Language",
     "settings.theme": "Theme",
@@ -82,16 +95,29 @@ const translations = {
     "about.futureDescription":
       "De futures opportunités dans le développement logiciel.",
 
+    "hero.greeting": "Bonjour, je m'appelle",
+    "hero.role": "Développeur full-stack",
+    "hero.description":
+      "Étudiante en développement logiciel en Belgique, je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études. Forte d’une expérience dans l’enseignement des langues et la traduction français–thaï, j’apporte une nouvelle perspective à mon parcours dans la technologie.",
+
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "nav.projects": "Projets",
     "nav.experience": "Expérience",
     "nav.contact": "Contact",
 
-    "hero.greeting": "Bonjour, je m'appelle",
-    "hero.role": "Développeur full-stack",
-    "hero.description":
-      "Étudiante en développement logiciel en Belgique, je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études. Forte d’une expérience dans l’enseignement des langues et la traduction français–thaï, j’apporte une nouvelle perspective à mon parcours dans la technologie.",
+    "projects.school": "Projet scolaire",
+    "projects.finalYear": "Projet de fin d’études",
+    "projects.foodOrder.description":
+      "Une plateforme de commande de repas développée dans le cadre de mon projet de fin d’études. J’ai réalisé le panneau d’administration, l’application web et l’application mobile destinées aux clients, connectés à un backend Laravel commun.",
+    "projects.collectors.description":
+      "Une application web développée dans le cadre d’un projet scolaire pour une association de collectionneurs. Elle réunit les clubs, les collections et les objets de collection, avec des fonctionnalités de vente, d’échange et de gestion d’événements, ainsi que des outils d’administration.",
+    "projects.temperature.description":
+      "A web application developed as a database course project to monitor refrigeration equipment. It manages equipment and locations, records temperature readings, flags readings outside defined limits, and displays temperature history through charts. A Vue interface connects to a Laravel API, with a stored procedure used when recording readings.",
+    "projects.dossiers.description":
+      "Une application web développée dans le cadre d’un projet scolaire pour gérer les dossiers administratifs à travers les étapes d’approbation, de traitement, de clôture et d’archivage. Elle regroupe les documents, les services et les intervenants, avec des droits d’accès selon les rôles et un historique des modifications. Son architecture sépare l’interface, la logique métier, les entités du domaine et la persistance des données.",
+    "projects.reactivities.description":
+      "Une application de gestion d’événements avec une interface React et une API ASP.NET Core. Les utilisateurs peuvent consulter, créer et rejoindre des activités, gérer leur profil et leurs photos, et suivre d’autres membres. Les organisateurs peuvent modifier ou supprimer leurs activités.",
 
     "settings.language": "Langue",
     "settings.theme": "Thème",
@@ -134,16 +160,29 @@ const translations = {
     "about.luxembourg": "ประเทศลักเซมเบิร์ก",
     "about.futureDescription": "โอกาสในอนาคตด้านการพัฒนาซอฟต์แวร์",
 
+    "hero.greeting": "สวัสดีค่ะ ฉันชื่อ",
+    "hero.role": "นักพัฒนาเว็บ full-stack",
+    "hero.description":
+      "ฉันกำลังศึกษาด้านการพัฒนาซอฟต์แวร์ในเบลเยียม และกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือเพื่อทำโครงงานจบการศึกษา ด้วยประสบการณ์ด้านการสอนภาษาและการแปลภาษาฝรั่งเศส–ไทย ฉันพร้อมนำมุมมองใหม่มาสู่เส้นทางอาชีพด้านเทคโนโลยี",
+
     "nav.home": "หน้าแรก",
     "nav.about": "เกี่ยวกับฉัน",
     "nav.projects": "ผลงาน",
     "nav.experience": "ประสบการณ์",
     "nav.contact": "ติดต่อ",
 
-    "hero.greeting": "สวัสดีค่ะ ฉันชื่อ",
-    "hero.role": "นักพัฒนาเว็บ full-stack",
-    "hero.description":
-      "ฉันกำลังศึกษาด้านการพัฒนาซอฟต์แวร์ในเบลเยียม และกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือเพื่อทำโครงงานจบการศึกษา ด้วยประสบการณ์ด้านการสอนภาษาและการแปลภาษาฝรั่งเศส–ไทย ฉันพร้อมนำมุมมองใหม่มาสู่เส้นทางอาชีพด้านเทคโนโลยี",
+    "projects.school": "โครงงานระหว่างเรียน",
+    "projects.finalYear": "โครงงานจบการศึกษา",
+    "projects.foodOrder.description":
+      "แพลตฟอร์มสั่งอาหารที่พัฒนาขึ้นสำหรับโครงงานจบการศึกษา ฉันพัฒนาระบบจัดการสำหรับผู้ดูแล แอปพลิเคชันเว็บสำหรับลูกค้า และแอปพลิเคชันมือถือสำหรับลูกค้า โดยเชื่อมต่อกับระบบหลังบ้าน Laravel เดียวกัน",
+    "projects.collectors.description":
+      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานระหว่างเรียนสำหรับสมาคมนักสะสม โดยรวบรวมชมรม คอลเลกชัน และของสะสม พร้อมฟังก์ชันการขาย การแลกเปลี่ยน การจัดการกิจกรรม และเครื่องมือสำหรับผู้ดูแลระบบ",
+    "projects.temperature.description":
+      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานในวิชาฐานข้อมูล เพื่อติดตามอุณหภูมิของอุปกรณ์ทำความเย็น ระบบจัดการอุปกรณ์และตำแหน่งที่ตั้ง บันทึกอุณหภูมิ แจ้งเตือนเมื่อค่าอยู่นอกช่วงที่กำหนด และแสดงประวัติอุณหภูมิเป็นกราฟ โดยใช้ส่วนติดต่อผู้ใช้ Vue เชื่อมต่อกับ API Laravel และเรียกใช้ Stored Procedure เมื่อบันทึกอุณหภูมิ",
+    "projects.dossiers.description":
+      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานระหว่างเรียน เพื่อจัดการแฟ้มงานธุรการตั้งแต่การอนุมัติ การดำเนินงาน การปิดงาน ไปจนถึงการจัดเก็บ ระบบรวบรวมเอกสาร หน่วยงาน และผู้เกี่ยวข้อง พร้อมกำหนดสิทธิ์การเข้าถึงตามบทบาทและบันทึกประวัติการเปลี่ยนแปลง โดยแยกส่วนติดต่อผู้ใช้ ตรรกะทางธุรกิจ แบบจำลองข้อมูล และการจัดเก็บข้อมูลออกจากกัน",
+    "projects.reactivities.description":
+      "แอปพลิเคชันจัดการกิจกรรมที่ใช้ React สำหรับส่วนติดต่อผู้ใช้ และ API ASP.NET Core ผู้ใช้สามารถค้นหากิจกรรม สร้างและเข้าร่วมกิจกรรม จัดการโปรไฟล์และรูปภาพ รวมถึงติดตามสมาชิกคนอื่นได้ ส่วนผู้จัดกิจกรรมสามารถแก้ไขหรือลบกิจกรรมของตนเองได้",
 
     "settings.language": "ภาษา",
     "settings.theme": "ธีม",
@@ -182,6 +221,8 @@ const translations = {
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       element.textContent = translate(element.dataset.i18n);
     });
+
+    document.dispatchEvent(new Event("cv:languagechange"));
 
     const button = document.querySelector(".menu-toggle");
     const open = button.getAttribute("aria-expanded") === "true";
