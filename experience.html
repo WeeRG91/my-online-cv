@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Experience | Weerachai Ruenpim</title>
+
+    <script src="js/themes.js"></script>
+
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/bubbles.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      defer
+    ></script>
+
+    <script src="js/experience.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
+  </head>
+
+  <body>
+    <nav
+      id="site-menu"
+      class="fullscreen-menu"
+      aria-label="Main navigation"
+      hidden
+    >
+      <div class="menu-row">
+        <a href="index.html" data-i18n="nav.home"> Home </a>
+      </div>
+
+      <div class="menu-row">
+        <a href="about.html" data-i18n="nav.about">About me</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="project.html" data-i18n="nav.projects">Projects</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="experience.html" aria-current="page" data-i18n="nav.experience"
+          >Experiences</a
+        >
+      </div>
+
+      <div class="menu-row">
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="site-header">
+      <div class="header-controls">
+        <details class="settings-dropdown" id="language-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.language">
+              Language
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h12M9 3v2M5 5c1 5 4 8 8 10M13 5c-1 5-4 8-8 10" />
+              <path d="m14 21 4-10 4 10M16 17h4" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.language">
+              Language
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="en" />
+              <span lang="en">English</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="fr" />
+              <span lang="fr">Français</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="th" />
+              <span lang="th">ไทย</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <details class="settings-dropdown" id="theme-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 2-2
+                     c0-.5-.2-1-.5-1.4a1.5 1.5 0 0 1 1.1-2.6H17
+                     a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"
+              />
+              <circle cx="7.5" cy="10" r=".8" />
+              <circle cx="10" cy="6.5" r=".8" />
+              <circle cx="14.5" cy="6.5" r=".8" />
+              <circle cx="17" cy="10" r=".8" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="light" />
+              <span class="theme-swatch swatch-light" aria-hidden="true"></span>
+              <span data-i18n="theme.light">Light</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="dark" />
+              <span class="theme-swatch swatch-dark" aria-hidden="true"></span>
+              <span data-i18n="theme.dark">Dark</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="candies" />
+              <span
+                class="theme-swatch swatch-cupcake"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.cupcake">Pinky</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="luxury" />
+              <span
+                class="theme-swatch swatch-luxury"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.luxury">Luxury</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-menu"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+
+          <svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="website-content">
+      <section class="experience-toolkit" aria-labelledby="toolkit-title">
+        <div class="technology-scene">
+          <div class="technology-background" aria-hidden="true"></div>
+
+          <h1 id="toolkit-title">
+            My development toolkit
+            <span class="toolkit-subtitle">
+              Technologies I’ve learned and use to build applications.
+            </span>
+          </h1>
+
+          <div class="technology-labels" aria-hidden="true">
+            <span class="technology-label" title="C#">
+              <img src="images/experience/technology-icons/csharp.png" alt="" />
+            </span>
+            <span class="technology-label" title="PHP">
+              <img src="images/experience/technology-icons/php.png" alt="" />
+            </span>
+            <span class="technology-label" title="JavaScript">
+              <img
+                src="images/experience/technology-icons/javascript.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="TypeScript">
+              <img
+                src="images/experience/technology-icons/typescript.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="Laravel">
+              <img
+                src="images/experience/technology-icons/laravel.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="ASP.NET Core">
+              <img
+                src="images/experience/technology-icons/aspnet-core.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="Vue">
+              <img src="images/experience/technology-icons/vue.png" alt="" />
+            </span>
+            <span class="technology-label" title="React">
+              <img src="images/experience/technology-icons/react.png" alt="" />
+            </span>
+            <span class="technology-label" title="React Native">
+              <img
+                src="images/experience/technology-icons/react-native.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="SQL">
+              <img src="images/experience/technology-icons/sql.png" alt="" />
+            </span>
+            <span class="technology-label" title="Inertia">
+              <img
+                src="images/experience/technology-icons/inertia.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="GSAP">
+              <img src="images/experience/technology-icons/gsap.png" alt="" />
+            </span>
+            <span class="technology-label" title="HTML">
+              <img src="images/experience/technology-icons/html.png" alt="" />
+            </span>
+            <span class="technology-label" title="CSS">
+              <img src="images/experience/technology-icons/css.png" alt="" />
+            </span>
+            <span class="technology-label" title="Tailwind CSS">
+              <img
+                src="images/experience/technology-icons/tailwind.png"
+                alt=""
+              />
+            </span>
+            <span class="technology-label" title="Redux">
+              <img src="images/experience/technology-icons/redux.png" alt="" />
+            </span>
+            <span class="technology-label" title="Pinia">
+              <img src="images/experience/technology-icons/pinia.png" alt="" />
+            </span>
+          </div>
+
+          <div class="technology-circle" aria-hidden="true"></div>
+        </div>
+
+        <div class="technology-cards">
+          <article class="technology-card">
+            <header class="toolkit-card-heading">
+              <span class="toolkit-card-number">01</span>
+              <div>
+                <h2>Backend</h2>
+                <p>Logic, data, and application services</p>
+              </div>
+            </header>
+
+            <section class="toolkit-group">
+              <h3>Languages</h3>
+              <ul class="technology-tags">
+                <li>C#</li>
+                <li>PHP</li>
+                <li>SQL</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Frameworks and views</h3>
+              <ul class="technology-tags">
+                <li>ASP.NET Core</li>
+                <li>Laravel</li>
+                <li>Razor</li>
+                <li>Blade</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Data</h3>
+              <ul class="technology-tags">
+                <li>Entity Framework Core</li>
+                <li>Eloquent</li>
+                <li>SQLite</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Authentication</h3>
+              <ul class="technology-tags">
+                <li>ASP.NET Core Identity</li>
+                <li>Laravel Sanctum</li>
+                <li>Laravel Breeze</li>
+              </ul>
+            </section>
+          </article>
+
+          <article class="technology-card">
+            <header class="toolkit-card-heading">
+              <span class="toolkit-card-number">02</span>
+              <div>
+                <h2>Frontend</h2>
+                <p>Interfaces, interaction, and user experience</p>
+              </div>
+            </header>
+
+            <section class="toolkit-group">
+              <h3>Languages</h3>
+              <ul class="technology-tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Frameworks and integration</h3>
+              <ul class="technology-tags">
+                <li>Vue</li>
+                <li>React</li>
+                <li>React Native</li>
+                <li>Expo</li>
+                <li>Inertia</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>State and data fetching</h3>
+              <ul class="technology-tags">
+                <li>Redux</li>
+                <li>Pinia</li>
+                <li>TanStack Query</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Styling and components</h3>
+              <ul class="technology-tags">
+                <li>Tailwind CSS</li>
+                <li>Bootstrap</li>
+                <li>Material UI</li>
+                <li>DaisyUI</li>
+                <li>shadcn-vue</li>
+              </ul>
+            </section>
+
+            <section class="toolkit-group">
+              <h3>Charts and animation</h3>
+              <ul class="technology-tags">
+                <li>Chart.js</li>
+                <li>ECharts</li>
+                <li>GSAP</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
