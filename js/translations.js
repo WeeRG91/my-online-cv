@@ -160,7 +160,7 @@ const translations = {
     "projects.collectors.description":
       "Une application web développée dans le cadre d’un projet scolaire pour une association de collectionneurs. Elle réunit les clubs, les collections et les objets de collection, avec des fonctionnalités de vente, d’échange et de gestion d’événements, ainsi que des outils d’administration.",
     "projects.temperature.description":
-      "Une application web développée dans le cadre d’un projet de cours sur les bases de données afin de surveiller des équipements de réfrigération. Elle permet de gérer les équipements et les emplacements, d’enregistrer les relevés de température, de signaler les valeurs situées en dehors des limites définies et d’afficher l’historique des températures sous forme de graphiques. Une interface Vue communique avec une API Laravel, et une procédure stockée est utilisée lors de l’enregistrement des relevés.",
+  "Une application web développée dans le cadre d’un projet de cours de bases de données pour surveiller les équipements frigorifiques. Elle gère les équipements et leurs emplacements, enregistre les relevés de température, signale les dépassements des limites définies et présente l’historique sous forme de graphiques. Une interface Vue communique avec une API Laravel, avec une procédure stockée utilisée lors de l’enregistrement des relevés.",
     "projects.dossiers.description":
       "Une application web développée dans le cadre d’un projet scolaire pour gérer les dossiers administratifs à travers les étapes d’approbation, de traitement, de clôture et d’archivage. Elle regroupe les documents, les services et les intervenants, avec des droits d’accès selon les rôles et un historique des modifications. Son architecture sépare l’interface, la logique métier, les entités du domaine et la persistance des données.",
     "projects.reactivities.description":
@@ -327,6 +327,14 @@ const translations = {
         //
       }
     });
+
+    function closeDropdown() {
+      dropdown.open = false;
+      trigger.focus();
+    }
+
+    choice.addEventListener("click", closeDropdown);
+    choice.addEventListener("change", closeDropdown);
   });
 
   document.addEventListener("click", (event) => {
