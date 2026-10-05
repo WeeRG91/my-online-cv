@@ -93,3 +93,14 @@ html[lang="th"] .menu-row a {
     padding-inline: 24px;
   }
 }
+
+.menu-row a[aria-current="page"] {
+  color: var(--overlay-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.menu-row a[aria-current="page"]::before {
+  font-weight: 700;
+}
