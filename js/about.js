@@ -94,7 +94,7 @@
     const nextVehicle = driving ? "car" : "plane";
 
     if (nextVehicle !== currentVehicle) {
-      travelerImage.src = driving ? "images/car.png" : "images/plane.png";
+      travelerImage.src = driving ? "images/about/car.png" : "images/about/plane.png";
 
       currentVehicle = nextVehicle;
     }
