@@ -43,6 +43,13 @@ const translations = {
     "experience.stateData": "State and data fetching",
     "experience.stylingComponents": "Styling and components",
     "experience.chartsAnimation": "Charts and animation",
+    "experience.professionalTitle": "Professional experience",
+    "experience.tutorPeriod": "2014–present",
+    "experience.tutorTitle": "Independent French & English Tutor",
+    "experience.tutorDescription":
+      "I began teaching private French and English lessons while studying for my master’s degree. Today, I continue supporting Thai learners living abroad, teaching in Thai and English.",
+    "experience.tutorStudies":
+      "I combine daytime tutoring with evening studies toward a bachelor’s degree in computer science, specializing in application development, at EAFC-Sudlux in Arlon, Belgium.",
 
     "hero.greeting": "Hello, I'm",
     "hero.role": "Full-stack developer",
@@ -126,6 +133,14 @@ const translations = {
     "experience.stateData": "Gestion d’état et récupération des données",
     "experience.stylingComponents": "Styles et composants",
     "experience.chartsAnimation": "Graphiques et animation",
+    "experience.professionalTitle": "Expérience professionnelle",
+    "experience.tutorPeriod": "2014–aujourd’hui",
+    "experience.tutorTitle":
+      "Professeure indépendante de français et d’anglais",
+    "experience.tutorDescription":
+      "J’ai commencé à donner des cours particuliers de français et d’anglais pendant mes études de master. Aujourd’hui, je continue à accompagner des apprenants thaïlandais vivant à l’étranger, en enseignant en thaï et en anglais.",
+    "experience.tutorStudies":
+      "Je combine mes cours particuliers en journée avec des études en soirée en bachelier en informatique, orientation développement d’applications, à l’EAFC-Sudlux à Arlon, en Belgique.",
 
     "hero.greeting": "Bonjour, je m'appelle",
     "hero.role": "Développeur full-stack",
@@ -207,6 +222,13 @@ const translations = {
     "experience.stateData": "การจัดการสถานะและการดึงข้อมูล",
     "experience.stylingComponents": "การจัดรูปแบบและคอมโพเนนต์",
     "experience.chartsAnimation": "กราฟและแอนิเมชัน",
+    "experience.professionalTitle": "ประสบการณ์การทำงาน",
+    "experience.tutorPeriod": "2014–ปัจจุบัน",
+    "experience.tutorTitle": "ครูสอนพิเศษภาษาฝรั่งเศสและภาษาอังกฤษอิสระ",
+    "experience.tutorDescription":
+      "ฉันเริ่มสอนพิเศษภาษาฝรั่งเศสและภาษาอังกฤษระหว่างศึกษาระดับปริญญาโท ปัจจุบันฉันยังคงสอนผู้เรียนชาวไทยที่อาศัยอยู่ต่างประเทศ โดยอธิบายบทเรียนเป็นภาษาไทยและภาษาอังกฤษ",
+    "experience.tutorStudies":
+      "ฉันสอนพิเศษในช่วงกลางวันควบคู่กับการเรียนภาคค่ำระดับปริญญาตรีด้านวิทยาการคอมพิวเตอร์ สาขาการพัฒนาแอปพลิเคชัน ที่ EAFC-Sudlux ในเมืองอาร์ลอน ประเทศเบลเยียม",
 
     "hero.greeting": "สวัสดีค่ะ ฉันชื่อ",
     "hero.role": "นักพัฒนาเว็บ full-stack",

@@ -9,6 +9,14 @@
   const cards = toolkit.querySelector(".technology-cards");
   const items = [...cards.querySelectorAll(".technology-card")];
   const menuButton = document.querySelector(".menu-toggle");
+  const professionalSection = document.querySelector(
+    ".professional-experience",
+  );
+  const professionalHeading = professionalSection.querySelector(
+    "#experience-heading",
+  );
+  const professionalCard =
+    professionalSection.querySelector(".work-experience");
 
   const positions = [
     [12, 16], // C#
@@ -57,8 +65,15 @@
     scene.before(track);
     track.append(scene);
     scene.append(cards);
-    scene.classList.add("is-animated");
 
+    const professionalPlaceholder = document.createComment(
+      "Professional experience position",
+    );
+
+    professionalSection.before(professionalPlaceholder);
+    scene.append(professionalSection);
+
+    scene.classList.add("is-animated");
     let timeline;
     let frame;
 
@@ -115,6 +130,31 @@
         : Math.min(580, availableHeight);
 
       const centerY = 80 + availableHeight / 2;
+
+      const mergedWidth = Math.min(850, width - 40);
+      const mergedHeight = Math.min(500, Math.max(120, availableHeight - 90));
+      const mergedCenterY = centerY + 40;
+
+      gsap.set(professionalSection, { autoAlpha: 0 });
+
+      gsap.set(professionalHeading, {
+        top: mergedCenterY - mergedHeight / 2 - 24,
+        xPercent: -50,
+        yPercent: -100,
+        opacity: 0,
+        y: 20,
+      });
+
+      gsap.set(professionalCard, {
+        position: "absolute",
+        left: width / 2,
+        top: mergedCenterY,
+        xPercent: -50,
+        yPercent: -50,
+        width: mergedWidth,
+        height: mergedHeight,
+        opacity: 0,
+      });
 
       const destinations = items.map((_, index) => ({
         x: mobile
@@ -196,7 +236,58 @@
           opacity: 1,
           duration: 0.35,
         })
-        .to({}, { duration: 0.8 });
+
+        // Pause so visitors can read the technology cards.
+        .to({}, { duration: 1 })
+
+        // Hide their text before bringing the shapes together.
+        .to(contents, {
+          opacity: 0,
+          duration: 0.3,
+        })
+
+        .to(items, {
+          left: width / 2,
+          top: centerY,
+          width: Math.min(cardWidth, 320),
+          height: Math.min(cardHeight, 240),
+          duration: 0.8,
+          ease: "power2.inOut",
+        })
+
+        // Both overlapping shapes expand into one large card.
+        .to(items, {
+          top: mergedCenterY,
+          width: mergedWidth,
+          height: mergedHeight,
+          borderRadius: 28,
+          duration: 0.8,
+          ease: "power2.inOut",
+        })
+
+        .set(professionalSection, { autoAlpha: 1 })
+
+        // Swap the merged shapes for the experience card.
+        .to(professionalCard, {
+          opacity: 1,
+          duration: 0.3,
+        })
+        .to(
+          items,
+          {
+            opacity: 0,
+            duration: 0.3,
+          },
+          "<",
+        )
+
+        .to(professionalHeading, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+        })
+
+        .to({}, { duration: 1 });
 
       update();
     }
@@ -219,6 +310,7 @@
       scene.classList.remove("is-animated");
       track.before(scene);
       scene.after(cards);
+      professionalPlaceholder.replaceWith(professionalSection);
       track.remove();
     };
   });

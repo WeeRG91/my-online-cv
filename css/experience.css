@@ -278,11 +278,7 @@
 .toolkit-group {
   padding-top: 16px;
   margin-top: 16px;
-  border-top: 1px solid color-mix(
-    in srgb,
-    var(--muted-color) 25%,
-    transparent
-  );
+  border-top: 1px solid color-mix(in srgb, var(--muted-color) 25%, transparent);
 }
 
 .toolkit-group h3 {
@@ -306,17 +302,9 @@
 .technology-tags li {
   max-width: 100%;
   padding: 6px 12px;
-  border: 1px solid color-mix(
-    in srgb,
-    var(--accent-color) 25%,
-    transparent
-  );
+  border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
   border-radius: 10px;
-  background: color-mix(
-    in srgb,
-    var(--page-background) 65%,
-    transparent
-  );
+  background: color-mix(in srgb, var(--page-background) 65%, transparent);
   color: var(--text-color);
   font-size: 0.85rem;
   overflow-wrap: anywhere;
@@ -347,4 +335,151 @@
   .toolkit-group h3 {
     margin: 0 0 8px;
   }
+}
+
+.professional-experience {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100svh;
+  padding: 110px max(24px, calc((100% - 1100px) / 2)) 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  background: radial-gradient(
+    ellipse at 15% 25%,
+    var(--accent-soft),
+    transparent 65%
+  );
+}
+
+.professional-experience::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 15%;
+  right: 5%;
+  width: clamp(140px, 25vw, 340px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 20%, transparent);
+  box-shadow: 0 0 0 35px color-mix(in srgb, var(--accent-color) 5%, transparent);
+  pointer-events: none;
+}
+
+.professional-experience > h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.work-experience {
+  position: relative;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid color-mix(in srgb, var(--muted-color) 25%, transparent);
+  border-radius: 28px;
+  background: color-mix(in srgb, var(--page-background) 75%, transparent);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 8%);
+}
+
+.work-period {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.work-experience h3 {
+  max-width: 30ch;
+  margin: 0 0 24px;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.work-experience > p:not(.work-period) {
+  max-width: 70ch;
+  margin: 16px 0 0;
+  color: var(--muted-color);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .professional-experience {
+    padding: 100px 20px 60px;
+    gap: 28px;
+  }
+}
+
+/* More scrolling space for the complete sequence. */
+.technology-scroll-track {
+  height: 650svh;
+}
+
+.is-animated .professional-experience {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  display: block;
+  background: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-animated .professional-experience::before {
+  display: none;
+}
+
+.is-animated #experience-heading {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.is-animated .work-experience {
+  box-sizing: border-box;
+  overflow-y: auto;
+  pointer-events: auto;
+
+  background:
+    radial-gradient(
+      ellipse at 28% 20%,
+      rgb(255 255 255 / 55%),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 75% 82%,
+      rgb(130 190 255 / 25%),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse,
+      transparent 45%,
+      rgb(255 255 255 / 18%) 78%,
+      rgb(255 255 255 / 35%) 100%
+    );
+
+  border: 1px solid rgb(255 255 255 / 45%);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 2px 3px 8px rgb(255 255 255 / 45%),
+    inset -3px -5px 10px rgb(70 120 180 / 18%),
+    0 8px 20px rgb(0 0 0 / 12%);
 }
