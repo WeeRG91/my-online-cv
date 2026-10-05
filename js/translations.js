@@ -28,6 +28,22 @@ const translations = {
     "about.luxembourg": "Luxembourg",
     "about.futureDescription": "Future opportunities in software development.",
 
+    "experience.pageTitle": "Experience | Weerachai Ruenpim",
+    "experience.toolkitTitle": "My development toolkit",
+    "experience.toolkitSubtitle":
+      "Technologies I’ve learned and use to build applications.",
+    "experience.backendSubtitle": "Logic, data, and application services",
+    "experience.frontendSubtitle":
+      "Interfaces, interaction, and user experience",
+    "experience.languages": "Languages",
+    "experience.frameworksViews": "Frameworks and views",
+    "experience.data": "Data",
+    "experience.authentication": "Authentication",
+    "experience.frameworksIntegration": "Frameworks and integration",
+    "experience.stateData": "State and data fetching",
+    "experience.stylingComponents": "Styling and components",
+    "experience.chartsAnimation": "Charts and animation",
+
     "hero.greeting": "Hello, I'm",
     "hero.role": "Full-stack developer",
     "hero.description":
@@ -95,6 +111,22 @@ const translations = {
     "about.futureDescription":
       "De futures opportunités dans le développement logiciel.",
 
+    "experience.pageTitle": "Expérience | Weerachai Ruenpim",
+    "experience.toolkitTitle": "Mes outils de développement",
+    "experience.toolkitSubtitle":
+      "Les technologies que j’ai apprises et que j’utilise pour créer des applications.",
+    "experience.backendSubtitle": "Logique, données et services applicatifs",
+    "experience.frontendSubtitle":
+      "Interfaces, interactions et expérience utilisateur",
+    "experience.languages": "Langages",
+    "experience.frameworksViews": "Frameworks et vues",
+    "experience.data": "Données",
+    "experience.authentication": "Authentification",
+    "experience.frameworksIntegration": "Frameworks et intégration",
+    "experience.stateData": "Gestion d’état et récupération des données",
+    "experience.stylingComponents": "Styles et composants",
+    "experience.chartsAnimation": "Graphiques et animation",
+
     "hero.greeting": "Bonjour, je m'appelle",
     "hero.role": "Développeur full-stack",
     "hero.description":
@@ -159,6 +191,22 @@ const translations = {
     "about.lookingAhead": "มองไปสู่อนาคต",
     "about.luxembourg": "ประเทศลักเซมเบิร์ก",
     "about.futureDescription": "โอกาสในอนาคตด้านการพัฒนาซอฟต์แวร์",
+
+    "experience.pageTitle": "ประสบการณ์ | Weerachai Ruenpim",
+    "experience.toolkitTitle": "เครื่องมือพัฒนาแอปพลิเคชันของฉัน",
+    "experience.toolkitSubtitle":
+      "เทคโนโลยีที่ฉันได้เรียนรู้และนำมาใช้ในการพัฒนาแอปพลิเคชัน",
+    "experience.backendSubtitle": "ตรรกะ ข้อมูล และบริการของแอปพลิเคชัน",
+    "experience.frontendSubtitle":
+      "หน้าจอการใช้งาน การโต้ตอบ และประสบการณ์ผู้ใช้",
+    "experience.languages": "ภาษา",
+    "experience.frameworksViews": "เฟรมเวิร์กและเทมเพลต",
+    "experience.data": "ข้อมูล",
+    "experience.authentication": "การยืนยันตัวตน",
+    "experience.frameworksIntegration": "เฟรมเวิร์กและการเชื่อมต่อ",
+    "experience.stateData": "การจัดการสถานะและการดึงข้อมูล",
+    "experience.stylingComponents": "การจัดรูปแบบและคอมโพเนนต์",
+    "experience.chartsAnimation": "กราฟและแอนิเมชัน",
 
     "hero.greeting": "สวัสดีค่ะ ฉันชื่อ",
     "hero.role": "นักพัฒนาเว็บ full-stack",
