@@ -1,5 +1,5 @@
 .hero {
-min-height: 100svh;
+  min-height: 100svh;
   max-width: 1100px;
   margin-inline: auto;
   padding: 80px 24px;
@@ -11,50 +11,71 @@ min-height: 100svh;
 }
 
 .hero-greeting {
-margin: 0 0 8px;
+  margin: 0 0 8px;
   color: var(--muted-color);
 }
 
 .hero h1 {
-margin: 0;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  font-size: 4rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.hero h1::before {
+  content: attr(data-name);
+  display: block;
+  visibility: hidden;
+}
+
+.hero-name {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
 .hero-role {
-margin: 20px 0 0;
+  margin: 20px 0 0;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent-color);
 }
 
 .hero-description {
-max-width: 900px;
+  max-width: 900px;
   margin: 16px 0 0;
   font-size: 1.125rem;
   color: var(--muted-color);
 }
 
 .hero-actions {
-display: flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
 }
 
 .website-content {
-isolation: isolate;
+  isolation: isolate;
 }
 
 .hero {
-position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .website-content {
-position: relative;
-    z-index: 1;
-    background-color: var(--page-background);
-    transform-origin: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--page-background);
+  transform-origin: center;
 }

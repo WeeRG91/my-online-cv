@@ -98,9 +98,19 @@ if (window.gsap && window.SplitText && !reduceMotion) {
     })
     .call(
       () => {
-        const titleCopy = preloader
-          .querySelector(".intro-title")
-          .cloneNode(true);
+        const originalTitle = preloader.querySelector(".intro-title");
+        const titleBounds = originalTitle.getBoundingClientRect();
+        const overlayBounds = splitOverlay.getBoundingClientRect();
+        const titleCopy = originalTitle.cloneNode(true);
+
+        Object.assign(titleCopy.style, {
+          position: "absolute",
+          left: `${titleBounds.left - overlayBounds.left}px`,
+          top: `${titleBounds.top - overlayBounds.top}px`,
+          width: `${titleBounds.width}px`,
+          height: `${titleBounds.height}px`,
+          margin: "0",
+        });
 
         splitOverlay.replaceChildren(titleCopy);
 

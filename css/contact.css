@@ -220,16 +220,53 @@
 
 @media (max-width: 700px) {
   .contact-page {
-    padding: 100px 20px 40px;
-    gap: 32px;
+    min-height: 100svh;
+    padding: 80px 16px 20px;
+    gap: 20px;
+  }
+
+  .contact-heading h1 {
+    margin-bottom: 12px;
+    font-size: 2.25rem;
+  }
+
+  .contact-heading p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .contact-panel {
+    padding: 20px 16px;
+  }
+
+  .contact-panel h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+
+  .contact-panel > p {
+    font-size: 0.9rem;
+    line-height: 1.45;
   }
 
   .contact-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .contact-link:first-child {
+    grid-column: 1 / -1;
   }
 
   .contact-link {
-    min-height: 80px;
+    min-height: 60px;
+    padding: 10px;
+    gap: 4px;
+  }
+
+  .contact-link-detail {
+    font-size: 0.8rem;
   }
 }
 
@@ -263,7 +300,14 @@
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.contact-bubble:hover .contact-tooltip,
+@media (hover: hover) and (pointer: fine) {
+  .contact-bubble:hover .contact-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+}
+
 .contact-bubble:focus-visible .contact-tooltip {
   opacity: 1;
   visibility: visible;

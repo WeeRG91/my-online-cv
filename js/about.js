@@ -14,7 +14,7 @@
   let belgiumDistance = 0;
   let currentVehicle = "plane";
   const carPreview = new Image();
-  carPreview.src = "images/car.png";
+  carPreview.src = "images/about/car.png";
   let flightFrame;
 
   const departure = layout.querySelector(".journey-departure");
