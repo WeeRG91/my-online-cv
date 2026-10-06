@@ -242,3 +242,36 @@
     transform: none;
   }
 }
+
+.contact-tooltip {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translate(-50%, -4px);
+  width: max-content;
+  max-width: min(280px, 80vw);
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--text-color);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-bubble:hover .contact-tooltip,
+.contact-bubble:focus-visible .contact-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-tooltip {
+    transition: none;
+  }
+}

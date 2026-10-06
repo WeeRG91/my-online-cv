@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Contact | Weerachai Ruenpim</title>
+    <title data-i18n="contact.pageTitle">Contact | Weerachai Ruenpim</title>
 
     <script src="js/themes.js"></script>
 
@@ -178,10 +178,12 @@
     <main class="website-content">
       <section class="contact-page" aria-labelledby="contact-title">
         <header class="contact-heading">
-          <h1 id="contact-title">Let’s connect</h1>
-          <p>
+          <h1 id="contact-title" data-i18n="contact.title">Let’s connect</h1>
+
+          <p data-i18n="contact.introduction">
             I’m looking for an internship in web and mobile application
-            development for my final-year project.
+            development for my final-year project, as well as future employment
+            opportunities in software development.
           </p>
         </header>
 
@@ -215,14 +217,24 @@
               <path class="envelope-flap" d="M12 24 L50 50 L88 24 Z" />
             </svg>
 
-            <span class="visually-hidden">Show contact details</span>
+            <span class="visually-hidden" data-i18n="contact.showDetails">
+              Show contact details
+            </span>
+            <span
+              class="contact-tooltip"
+              data-i18n="contact.showDetails"
+              aria-hidden="true"
+            >
+              Show contact details
+            </span>
           </button>
 
           <div id="contact-panel" class="contact-panel">
-            <h2>Get in touch</h2>
-            <p>
-              Interested in discussing an internship opportunity? I’d be happy
-              to hear from you.
+            <h2 data-i18n="contact.panelTitle">Get in touch</h2>
+
+            <p data-i18n="contact.panelDescription">
+              Interested in discussing an internship or employment opportunity?
+              I’d be happy to hear from you.
             </p>
 
             <div class="contact-links">
@@ -230,7 +242,9 @@
                 class="contact-link"
                 href="mailto:weerachai.ruenpim@hotmail.com"
               >
-                <span class="contact-link-label">Email</span>
+                <span class="contact-link-label" data-i18n="contact.email">
+                  Email
+                </span>
                 <span class="contact-link-detail"
                   >weerachai.ruenpim@hotmail.com</span
                 >

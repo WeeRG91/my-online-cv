@@ -28,6 +28,16 @@ const translations = {
     "about.luxembourg": "Luxembourg",
     "about.futureDescription": "Future opportunities in software development.",
 
+    "contact.pageTitle": "Contact | Weerachai Ruenpim",
+    "contact.title": "Let’s connect",
+    "contact.introduction":
+      "I’m looking for an internship in web and mobile application development for my final-year project, as well as future employment opportunities in software development.",
+    "contact.showDetails": "Show contact details",
+    "contact.panelTitle": "Get in touch",
+    "contact.panelDescription":
+      "Interested in discussing an internship or employment opportunity? I’d be happy to hear from you.",
+    "contact.email": "Email",
+
     "experience.pageTitle": "Experience | Weerachai Ruenpim",
     "experience.toolkitTitle": "My development toolkit",
     "experience.toolkitSubtitle":
@@ -118,6 +128,16 @@ const translations = {
     "about.futureDescription":
       "De futures opportunités dans le développement logiciel.",
 
+    "contact.pageTitle": "Contact | Weerachai Ruenpim",
+    "contact.title": "Prenons contact",
+    "contact.introduction":
+      "Je recherche un stage en développement d’applications web et mobiles pour mon projet de fin d’études, ainsi que de futures opportunités professionnelles dans le développement logiciel.",
+    "contact.showDetails": "Afficher mes coordonnées",
+    "contact.panelTitle": "Contactez-moi",
+    "contact.panelDescription":
+      "Vous souhaitez discuter d’une opportunité de stage ou d’emploi ? Je serais ravie d’échanger avec vous.",
+    "contact.email": "E-mail",
+
     "experience.pageTitle": "Expérience | Weerachai Ruenpim",
     "experience.toolkitTitle": "Mes outils de développement",
     "experience.toolkitSubtitle":
@@ -160,7 +180,7 @@ const translations = {
     "projects.collectors.description":
       "Une application web développée dans le cadre d’un projet scolaire pour une association de collectionneurs. Elle réunit les clubs, les collections et les objets de collection, avec des fonctionnalités de vente, d’échange et de gestion d’événements, ainsi que des outils d’administration.",
     "projects.temperature.description":
-  "Une application web développée dans le cadre d’un projet de cours de bases de données pour surveiller les équipements frigorifiques. Elle gère les équipements et leurs emplacements, enregistre les relevés de température, signale les dépassements des limites définies et présente l’historique sous forme de graphiques. Une interface Vue communique avec une API Laravel, avec une procédure stockée utilisée lors de l’enregistrement des relevés.",
+      "Une application web développée dans le cadre d’un projet de cours de bases de données pour surveiller les équipements frigorifiques. Elle gère les équipements et leurs emplacements, enregistre les relevés de température, signale les dépassements des limites définies et présente l’historique sous forme de graphiques. Une interface Vue communique avec une API Laravel, avec une procédure stockée utilisée lors de l’enregistrement des relevés.",
     "projects.dossiers.description":
       "Une application web développée dans le cadre d’un projet scolaire pour gérer les dossiers administratifs à travers les étapes d’approbation, de traitement, de clôture et d’archivage. Elle regroupe les documents, les services et les intervenants, avec des droits d’accès selon les rôles et un historique des modifications. Son architecture sépare l’interface, la logique métier, les entités du domaine et la persistance des données.",
     "projects.reactivities.description":
@@ -206,6 +226,16 @@ const translations = {
     "about.lookingAhead": "มองไปสู่อนาคต",
     "about.luxembourg": "ประเทศลักเซมเบิร์ก",
     "about.futureDescription": "โอกาสในอนาคตด้านการพัฒนาซอฟต์แวร์",
+
+    "contact.pageTitle": "ติดต่อ | Weerachai Ruenpim",
+    "contact.title": "มาพูดคุยกันค่ะ",
+    "contact.introduction":
+      "ฉันกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือสำหรับโครงงานจบการศึกษา รวมถึงโอกาสทำงานด้านการพัฒนาซอฟต์แวร์ในอนาคต",
+    "contact.showDetails": "แสดงช่องทางติดต่อ",
+    "contact.panelTitle": "ติดต่อฉัน",
+    "contact.panelDescription":
+      "หากคุณต้องการพูดคุยเกี่ยวกับโอกาสฝึกงานหรือการทำงาน ฉันยินดีพูดคุยกับคุณค่ะ",
+    "contact.email": "อีเมล",
 
     "experience.pageTitle": "ประสบการณ์ | Weerachai Ruenpim",
     "experience.toolkitTitle": "เครื่องมือพัฒนาแอปพลิเคชันของฉัน",
