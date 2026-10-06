@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | Weerachai Ruenpim</title>
+
+    <script src="js/themes.js"></script>
+
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/bubbles.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"
+      defer
+    ></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/menu.js" defer></script>
+  </head>
+
+  <body>
+    <nav
+      id="site-menu"
+      class="fullscreen-menu"
+      aria-label="Main navigation"
+      hidden
+    >
+      <div class="menu-row">
+        <a href="index.html" data-i18n="nav.home"> Home </a>
+      </div>
+
+      <div class="menu-row">
+        <a href="about.html" data-i18n="nav.about">About me</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="project.html" data-i18n="nav.projects">Projects</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="experience.html" data-i18n="nav.experience">Experiences</a>
+      </div>
+
+      <div class="menu-row">
+        <a href="contact.html" aria-current="page" data-i18n="nav.contact"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <header class="site-header">
+      <div class="header-controls">
+        <details class="settings-dropdown" id="language-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.language">
+              Language
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h12M9 3v2M5 5c1 5 4 8 8 10M13 5c-1 5-4 8-8 10" />
+              <path d="m14 21 4-10 4 10M16 17h4" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.language">
+              Language
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="en" />
+              <span lang="en">English</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="fr" />
+              <span lang="fr">Français</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="language-choice" value="th" />
+              <span lang="th">ไทย</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <details class="settings-dropdown" id="theme-dropdown">
+          <summary class="icon-control">
+            <span class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </span>
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 2-2
+                     c0-.5-.2-1-.5-1.4a1.5 1.5 0 0 1 1.1-2.6H17
+                     a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"
+              />
+              <circle cx="7.5" cy="10" r=".8" />
+              <circle cx="10" cy="6.5" r=".8" />
+              <circle cx="14.5" cy="6.5" r=".8" />
+              <circle cx="17" cy="10" r=".8" />
+            </svg>
+          </summary>
+
+          <fieldset class="settings-panel">
+            <legend class="visually-hidden" data-i18n="settings.theme">
+              Theme
+            </legend>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="light" />
+              <span class="theme-swatch swatch-light" aria-hidden="true"></span>
+              <span data-i18n="theme.light">Light</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="dark" />
+              <span class="theme-swatch swatch-dark" aria-hidden="true"></span>
+              <span data-i18n="theme.dark">Dark</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="candies" />
+              <span
+                class="theme-swatch swatch-cupcake"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.cupcake">Pinky</span>
+            </label>
+
+            <label class="settings-option">
+              <input type="radio" name="theme-choice" value="luxury" />
+              <span
+                class="theme-swatch swatch-luxury"
+                aria-hidden="true"
+              ></span>
+              <span data-i18n="theme.luxury">Luxury</span>
+            </label>
+          </fieldset>
+        </details>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-menu"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+
+          <svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="website-content">
+      <section class="contact-page" aria-labelledby="contact-title">
+        <header class="contact-heading">
+          <h1 id="contact-title">Let’s connect</h1>
+          <p>
+            I’m looking for an internship in web and mobile application
+            development for my final-year project.
+          </p>
+        </header>
+
+        <div class="contact-scene">
+          <button
+            class="contact-bubble"
+            type="button"
+            aria-controls="contact-panel"
+            aria-expanded="true"
+            hidden
+          >
+            <svg
+              class="contact-envelope"
+              viewBox="0 -20 100 100"
+              aria-hidden="true"
+            >
+              <g class="envelope-letter">
+                <rect x="25" y="25" width="50" height="38" rx="4" />
+                <path d="M35 35h30M35 44h30M35 53h18" />
+              </g>
+
+              <rect
+                class="envelope-body"
+                x="10"
+                y="24"
+                width="80"
+                height="46"
+                rx="6"
+              />
+
+              <path class="envelope-flap" d="M12 24 L50 50 L88 24 Z" />
+            </svg>
+
+            <span class="visually-hidden">Show contact details</span>
+          </button>
+
+          <div id="contact-panel" class="contact-panel">
+            <h2>Get in touch</h2>
+            <p>
+              Interested in discussing an internship opportunity? I’d be happy
+              to hear from you.
+            </p>
+
+            <div class="contact-links">
+              <a
+                class="contact-link"
+                href="mailto:weerachai.ruenpim@hotmail.com"
+              >
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-detail"
+                  >weerachai.ruenpim@hotmail.com</span
+                >
+              </a>
+
+              <a
+                class="contact-link"
+                href="https://github.com/WeeRG91"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-detail">WeeRG91 ↗</span>
+              </a>
+
+              <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/weerachai-ruenpim-384383407/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-detail">Weerachai Ruenpim ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

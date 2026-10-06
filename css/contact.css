@@ -1,0 +1,244 @@
+.contact-page {
+  min-height: 100svh;
+  padding: 120px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.contact-heading {
+  max-width: 720px;
+  text-align: center;
+}
+
+.contact-heading h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.1;
+}
+
+.contact-heading p {
+  margin: 0;
+  color: var(--muted-color);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.contact-scene {
+  position: relative;
+  width: min(720px, 100%);
+  isolation: isolate;
+}
+
+.contact-bubble {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.contact-bubble[hidden] {
+  display: none;
+}
+
+.contact-bubble:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 8px;
+}
+
+.contact-surface {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--accent-color) 40%,
+    transparent
+  );
+
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgb(255 255 255 / 55%),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--accent-soft) 35%, transparent),
+      color-mix(in srgb, var(--page-background) 65%, transparent)
+    );
+
+  box-shadow:
+    inset 2px 3px 8px rgb(255 255 255 / 45%),
+    inset -3px -5px 10px rgb(70 120 180 / 18%),
+    0 8px 24px rgb(0 0 0 / 12%);
+
+  backdrop-filter: blur(8px);
+}
+
+.contact-envelope {
+  display: block;
+  width: 86px;
+  height: 86px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.envelope-letter rect,
+.envelope-body,
+.envelope-flap {
+  fill: var(--page-background);
+}
+
+.contact-panel {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(24px, 5vw, 44px);
+  border: 1px solid color-mix(
+    in srgb,
+    var(--accent-color) 25%,
+    transparent
+  );
+  border-radius: 28px;
+  background: color-mix(
+    in srgb,
+    var(--page-background) 75%,
+    var(--accent-soft)
+  );
+  box-shadow: 0 20px 60px rgb(0 0 0 / 8%);
+  text-align: center;
+}
+
+.contact-panel h2 {
+  margin: 0 0 16px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.contact-panel h2:focus {
+  outline: none;
+}
+
+.contact-panel > p {
+  max-width: 48ch;
+  margin: 0 auto;
+  color: var(--muted-color);
+  line-height: 1.7;
+}
+
+/* Contact links. */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 110px;
+  padding: 20px 16px;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--accent-color) 25%,
+    transparent
+  );
+  border-radius: 14px;
+  background: color-mix(
+    in srgb,
+    var(--page-background) 55%,
+    transparent
+  );
+  color: var(--text-color);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: transform 0.2s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-4px);
+}
+
+.contact-link:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 4px;
+}
+
+.contact-link-label {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.contact-link-detail {
+  font-size: 0.85rem;
+}
+
+.contact-scene.contact-enhanced {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.contact-enhanced .contact-bubble,
+.contact-enhanced .contact-panel {
+  grid-area: 1 / 1;
+}
+
+.contact-enhanced .contact-bubble {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-enhanced .contact-panel {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .contact-page {
+    padding: 100px 20px 40px;
+    gap: 32px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-link {
+    min-height: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-link {
+    transition: none;
+  }
+
+  .contact-link:hover {
+    transform: none;
+  }
+}
