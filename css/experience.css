@@ -483,3 +483,62 @@
     inset -3px -5px 10px rgb(70 120 180 / 18%),
     0 8px 20px rgb(0 0 0 / 12%);
 }
+
+.technology-label::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, 5px);
+
+  width: max-content;
+  padding: 7px 12px;
+  border-radius: 10px;
+
+  background: var(--accent-soft);
+  color: var(--text-color);
+  border: 1px solid
+    color-mix(in srgb, var(--accent-color) 25%, transparent);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+/* Let the pointer reach the bubbles behind the card container. */
+.is-animated .technology-cards {
+  pointer-events: none;
+}
+
+.is-animated .technology-card {
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .technology-label:hover {
+    z-index: 10;
+  }
+
+  .technology-label:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technology-label::after {
+    transition: none;
+  }
+}

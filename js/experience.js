@@ -39,10 +39,14 @@
   ];
 
   labels.forEach((label, index) => {
-    const [x, y] = positions[index % positions.length];
-    label.style.left = `${x}%`;
-    label.style.top = `${y}%`;
-  });
+  const [x, y] = positions[index % positions.length];
+
+  label.style.left = `${x}%`;
+  label.style.top = `${y}%`;
+
+  label.dataset.tooltip = label.getAttribute("title");
+  label.removeAttribute("title");
+});
 
   const contents = items.map((card) => {
     const content = document.createElement("div");
