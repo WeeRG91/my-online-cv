@@ -37,6 +37,7 @@ const translations = {
     "contact.panelDescription":
       "Interested in discussing an internship or employment opportunity? I’d be happy to hear from you.",
     "contact.email": "Email",
+    "contact.downloadCV": "Download my CV",
 
     "experience.pageTitle": "Experience | Weerachai Ruenpim",
     "experience.toolkitTitle": "My development toolkit",
@@ -137,6 +138,7 @@ const translations = {
     "contact.panelDescription":
       "Vous souhaitez discuter d’une opportunité de stage ou d’emploi ? Je serais ravie d’échanger avec vous.",
     "contact.email": "E-mail",
+    "contact.downloadCV": "Télécharger mon CV",
 
     "experience.pageTitle": "Expérience | Weerachai Ruenpim",
     "experience.toolkitTitle": "Mes outils de développement",
@@ -236,6 +238,7 @@ const translations = {
     "contact.panelDescription":
       "หากคุณต้องการพูดคุยเกี่ยวกับโอกาสฝึกงานหรือการทำงาน ฉันยินดีพูดคุยกับคุณค่ะ",
     "contact.email": "อีเมล",
+    "contact.downloadCV": "ดาวน์โหลดประวัติส่วนตัว",
 
     "experience.pageTitle": "ประสบการณ์ | Weerachai Ruenpim",
     "experience.toolkitTitle": "เครื่องมือพัฒนาแอปพลิเคชันของฉัน",
