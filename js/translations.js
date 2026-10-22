@@ -76,15 +76,15 @@ const translations = {
     "projects.school": "School project",
     "projects.finalYear": "Final-year project",
     "projects.foodOrder.description":
-      "A food ordering platform developed for my final-year project. I built the administration panel, customer web application, and customer mobile application, connected through a shared Laravel backend.",
+      "A food ordering platform with an admin panel, customer website, and mobile app, all connected to a shared Laravel backend.",
     "projects.collectors.description":
-      "A web application developed as a school project for a collectors’ association. It brings together clubs, collections, and collectible items, with features for sales, exchanges, and events, alongside administration tools.",
+      "A web application for a collectors’ association to manage clubs, collections, items, sales, exchanges, and events, with administration tools.",
     "projects.temperature.description":
-      "A web application developed as a database course project to monitor refrigeration equipment. It manages equipment and locations, records temperature readings, flags readings outside defined limits, and displays temperature history through charts. A Vue interface connects to a Laravel API, with a stored procedure used when recording readings.",
+      "A refrigeration monitoring application built with Vue and Laravel, featuring temperature tracking, alerts, history charts, and a database stored procedure.",
     "projects.dossiers.description":
-      "A web application developed as a school project to manage administrative dossiers through approval, processing, closure, and archiving stages. It brings together documents, departments, and participants, with role-based access and a history of changes. The application separates its interface, business logic, domain entities, and database persistence.",
+      "A web application for managing administrative dossiers, documents, workflows, and role-based access, with clean architecture and change history.",
     "projects.reactivities.description":
-      "An event management application with a React frontend and an ASP.NET Core API. Users can browse, create, and join activities, manage their profiles and photos, and follow other members. Event hosts can edit or delete their activities.",
+      "An event management application built with React and ASP.NET Core, allowing users to manage activities, profiles, photos, and social connections.",
 
     "settings.language": "Language",
     "settings.theme": "Theme",
@@ -178,15 +178,15 @@ const translations = {
     "projects.school": "Projet scolaire",
     "projects.finalYear": "Projet de fin d’études",
     "projects.foodOrder.description":
-      "Une plateforme de commande de repas développée dans le cadre de mon projet de fin d’études. J’ai réalisé le panneau d’administration, l’application web et l’application mobile destinées aux clients, connectés à un backend Laravel commun.",
+      "Une plateforme de commande de repas comprenant un panneau d’administration, un site client et une application mobile, reliés à un backend Laravel commun.",
     "projects.collectors.description":
-      "Une application web développée dans le cadre d’un projet scolaire pour une association de collectionneurs. Elle réunit les clubs, les collections et les objets de collection, avec des fonctionnalités de vente, d’échange et de gestion d’événements, ainsi que des outils d’administration.",
+      "Une application web pour une association de collectionneurs permettant de gérer les clubs, collections, objets, ventes, échanges et événements, avec des outils d’administration.",
     "projects.temperature.description":
-      "Une application web développée dans le cadre d’un projet de cours de bases de données pour surveiller les équipements frigorifiques. Elle gère les équipements et leurs emplacements, enregistre les relevés de température, signale les dépassements des limites définies et présente l’historique sous forme de graphiques. Une interface Vue communique avec une API Laravel, avec une procédure stockée utilisée lors de l’enregistrement des relevés.",
+      "Une application de surveillance frigorifique développée avec Vue et Laravel, intégrant le suivi des températures, des alertes, des graphiques historiques et une procédure stockée.",
     "projects.dossiers.description":
-      "Une application web développée dans le cadre d’un projet scolaire pour gérer les dossiers administratifs à travers les étapes d’approbation, de traitement, de clôture et d’archivage. Elle regroupe les documents, les services et les intervenants, avec des droits d’accès selon les rôles et un historique des modifications. Son architecture sépare l’interface, la logique métier, les entités du domaine et la persistance des données.",
+      "Une application web de gestion de dossiers administratifs, de documents, de workflows et d’accès par rôles, avec clean architecture et un historique des modifications.",
     "projects.reactivities.description":
-      "Une application de gestion d’événements avec une interface React et une API ASP.NET Core. Les utilisateurs peuvent consulter, créer et rejoindre des activités, gérer leur profil et leurs photos, et suivre d’autres membres. Les organisateurs peuvent modifier ou supprimer leurs activités.",
+      "Une application de gestion d’événements développée avec React et ASP.NET Core, permettant de gérer les activités, profils, photos et interactions entre membres.",
 
     "settings.language": "Langue",
     "settings.theme": "Thème",
@@ -277,15 +277,15 @@ const translations = {
     "projects.school": "โครงงานระหว่างเรียน",
     "projects.finalYear": "โครงงานจบการศึกษา",
     "projects.foodOrder.description":
-      "แพลตฟอร์มสั่งอาหารที่พัฒนาขึ้นสำหรับโครงงานจบการศึกษา ฉันพัฒนาระบบจัดการสำหรับผู้ดูแล แอปพลิเคชันเว็บสำหรับลูกค้า และแอปพลิเคชันมือถือสำหรับลูกค้า โดยเชื่อมต่อกับระบบหลังบ้าน Laravel เดียวกัน",
+      "แพลตฟอร์มสั่งอาหารที่พัฒนาเป็นโปรเจกต์จบการศึกษา ประกอบด้วยระบบจัดการสำหรับผู้ดูแล เว็บไซต์สำหรับลูกค้า และแอปพลิเคชันมือถือ โดยทั้งหมดเชื่อมต่อกับ Backend Laravel เดียวกัน",
     "projects.collectors.description":
-      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานระหว่างเรียนสำหรับสมาคมนักสะสม โดยรวบรวมชมรม คอลเลกชัน และของสะสม พร้อมฟังก์ชันการขาย การแลกเปลี่ยน การจัดการกิจกรรม และเครื่องมือสำหรับผู้ดูแลระบบ",
+      "เว็บแอปพลิเคชันที่พัฒนาสำหรับสมาคมนักสะสม เพื่อจัดการชมรม คอลเลกชัน และสิ่งของสะสม พร้อมฟังก์ชันซื้อขาย แลกเปลี่ยน จัดกิจกรรม และระบบบริหารจัดการ",
     "projects.temperature.description":
-      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานในวิชาฐานข้อมูล เพื่อติดตามอุณหภูมิของอุปกรณ์ทำความเย็น ระบบจัดการอุปกรณ์และตำแหน่งที่ตั้ง บันทึกอุณหภูมิ แจ้งเตือนเมื่อค่าอยู่นอกช่วงที่กำหนด และแสดงประวัติอุณหภูมิเป็นกราฟ โดยใช้ส่วนติดต่อผู้ใช้ Vue เชื่อมต่อกับ API Laravel และเรียกใช้ Stored Procedure เมื่อบันทึกอุณหภูมิ",
+      "แอปพลิเคชันตรวจสอบอุณหภูมิอุปกรณ์ทำความเย็นที่พัฒนาเป็นโปรเจกต์วิชาฐานข้อมูล สามารถจัดการอุปกรณ์ สถานที่ และบันทึกอุณหภูมิ ตรวจจับค่าที่เกินขอบเขต และแสดงกราฟย้อนหลัง พัฒนาด้วย Vue, Laravel API และ Stored Procedure สำหรับบันทึกข้อมูล",
     "projects.dossiers.description":
-      "เว็บแอปพลิเคชันที่พัฒนาขึ้นเป็นโครงงานระหว่างเรียน เพื่อจัดการแฟ้มงานธุรการตั้งแต่การอนุมัติ การดำเนินงาน การปิดงาน ไปจนถึงการจัดเก็บ ระบบรวบรวมเอกสาร หน่วยงาน และผู้เกี่ยวข้อง พร้อมกำหนดสิทธิ์การเข้าถึงตามบทบาทและบันทึกประวัติการเปลี่ยนแปลง โดยแยกส่วนติดต่อผู้ใช้ ตรรกะทางธุรกิจ แบบจำลองข้อมูล และการจัดเก็บข้อมูลออกจากกัน",
+      "เว็บแอปพลิเคชันจัดการแฟ้มงานธุรการ ตั้งแต่การอนุมัติ การดำเนินงาน การปิดงาน จนถึงการจัดเก็บถาวร พร้อมระบบจัดการเอกสารและแผนก การกำหนดสิทธิ์ตามบทบาท ประวัติการเปลี่ยนแปลง และสถาปัตยกรรมแบบแบ่งชั้น",
     "projects.reactivities.description":
-      "แอปพลิเคชันจัดการกิจกรรมที่ใช้ React สำหรับส่วนติดต่อผู้ใช้ และ API ASP.NET Core ผู้ใช้สามารถค้นหากิจกรรม สร้างและเข้าร่วมกิจกรรม จัดการโปรไฟล์และรูปภาพ รวมถึงติดตามสมาชิกคนอื่นได้ ส่วนผู้จัดกิจกรรมสามารถแก้ไขหรือลบกิจกรรมของตนเองได้",
+      "แอปพลิเคชันจัดการกิจกรรมที่พัฒนาด้วย React และ ASP.NET Core ผู้ใช้สามารถค้นหา สร้าง และเข้าร่วมกิจกรรม จัดการโปรไฟล์และรูปภาพ ติดตามสมาชิกคนอื่น รวมถึงแก้ไขหรือลบกิจกรรมที่ตนเองเป็นผู้จัด",
 
     "settings.language": "ภาษา",
     "settings.theme": "ธีม",

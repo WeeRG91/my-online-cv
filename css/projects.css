@@ -120,7 +120,29 @@
   }
 
   .minimap-info-list {
-    height: 340px;
+    height: 300px;
+  }
+
+  .minimap-item-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .project-description {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .project-technologies {
+    margin: 12px 0 0;
+    gap: 6px;
+  }
+
+  .project-technologies li {
+    padding: 3px 8px;
+    font-size: 0.78rem;
   }
 }
 
