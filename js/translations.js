@@ -56,7 +56,7 @@ const translations = {
     "experience.chartsAnimation": "Charts and animation",
     "experience.professionalTitle": "Professional experience",
     "experience.tutorPeriod": "2014–present",
-    "experience.tutorTitle": "Independent French & English Tutor",
+    "experience.tutorTitle": "French & English Tutor",
     "experience.tutorDescription":
       "I began teaching private French and English lessons while studying for my master’s degree. Today, I continue supporting Thai learners living abroad, teaching in Thai and English.",
     "experience.tutorStudies":
@@ -158,9 +158,9 @@ const translations = {
     "experience.professionalTitle": "Expérience professionnelle",
     "experience.tutorPeriod": "2014–aujourd’hui",
     "experience.tutorTitle":
-      "Professeure indépendante de français et d’anglais",
+      "Professeure de français et d’anglais",
     "experience.tutorDescription":
-      "J’ai commencé à donner des cours particuliers de français et d’anglais pendant mes études de master. Aujourd’hui, je continue à accompagner des apprenants thaïlandais vivant à l’étranger, en enseignant en thaï et en anglais.",
+      "J’ai donné des cours particuliers de français et d’anglais pendant mon master. Et je continue à accompagner des apprenants thaïlandais vivant à l’étranger, en enseignant en thaï et en anglais.",
     "experience.tutorStudies":
       "Je combine mes cours particuliers en journée avec des études en soirée en bachelier en informatique, orientation développement d’applications, à l’EAFC-Sudlux à Arlon, en Belgique.",
 
@@ -257,7 +257,7 @@ const translations = {
     "experience.chartsAnimation": "กราฟและแอนิเมชัน",
     "experience.professionalTitle": "ประสบการณ์การทำงาน",
     "experience.tutorPeriod": "2014–ปัจจุบัน",
-    "experience.tutorTitle": "ครูสอนพิเศษภาษาฝรั่งเศสและภาษาอังกฤษอิสระ",
+    "experience.tutorTitle": "ครูสอนพิเศษภาษาฝรั่งเศสและภาษาอังกฤษ",
     "experience.tutorDescription":
       "ฉันเริ่มสอนพิเศษภาษาฝรั่งเศสและภาษาอังกฤษระหว่างศึกษาระดับปริญญาโท ปัจจุบันฉันยังคงสอนผู้เรียนชาวไทยที่อาศัยอยู่ต่างประเทศ โดยอธิบายบทเรียนเป็นภาษาไทยและภาษาอังกฤษ",
     "experience.tutorStudies":

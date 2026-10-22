@@ -130,7 +130,7 @@
         : Math.min(580, (width - 80 - gap) / 2);
 
       const cardHeight = mobile
-        ? (availableHeight - gap) / 2
+        ? ((availableHeight - gap) / 2) * 0.8
         : Math.min(580, availableHeight);
 
       const centerY = 80 + availableHeight / 2;
