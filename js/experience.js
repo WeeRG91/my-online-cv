@@ -136,7 +136,7 @@
       const centerY = 80 + availableHeight / 2;
 
       const mergedWidth = Math.min(850, width - 40);
-      const mergedHeight = Math.min(500, Math.max(120, availableHeight - 90));
+      const mergedHeight = Math.min(540, Math.max(120, availableHeight - 60));
       const mergedCenterY = centerY + 40;
 
       gsap.set(professionalSection, { autoAlpha: 0 });

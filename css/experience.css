@@ -421,7 +421,6 @@
   }
 }
 
-/* More scrolling space for the complete sequence. */
 .technology-scroll-track {
   height: 650svh;
 }
@@ -516,7 +515,6 @@
     visibility 0.18s ease;
 }
 
-/* Let the pointer reach the bubbles behind the card container. */
 .is-animated .technology-cards {
   pointer-events: none;
 }
