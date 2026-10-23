@@ -67,6 +67,9 @@ const translations = {
     "hero.description":
       "Software development student based in Belgium, seeking an internship in web and mobile app development for my final-year project. With a background in language teaching and French–Thai translation, I’m bringing a new perspective to my career in technology.",
 
+    "hero.aboutLink": "About me",
+    "hero.experienceLink": "My experience",
+
     "nav.home": "Home",
     "nav.about": "About me",
     "nav.projects": "Projects",
@@ -169,6 +172,9 @@ const translations = {
     "hero.description":
       "Étudiante en développement logiciel en Belgique, je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études. Forte d’une expérience dans l’enseignement des langues et la traduction français–thaï, j’apporte une nouvelle perspective à mon parcours dans la technologie.",
 
+    "hero.aboutLink": "À propos de moi",
+    "hero.experienceLink": "Mon expérience",
+
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "nav.projects": "Projets",
@@ -267,6 +273,9 @@ const translations = {
     "hero.role": "นักพัฒนาเว็บ full-stack",
     "hero.description":
       "ฉันกำลังศึกษาด้านการพัฒนาซอฟต์แวร์ในเบลเยียม และกำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บและแอปพลิเคชันมือถือเพื่อทำโครงงานจบการศึกษา ด้วยประสบการณ์ด้านการสอนภาษาและการแปลภาษาฝรั่งเศส–ไทย ฉันพร้อมนำมุมมองใหม่มาสู่เส้นทางอาชีพด้านเทคโนโลยี",
+
+    "hero.aboutLink": "เกี่ยวกับฉัน",
+    "hero.experienceLink": "ประสบการณ์ของฉัน",
 
     "nav.home": "หน้าแรก",
     "nav.about": "เกี่ยวกับฉัน",
