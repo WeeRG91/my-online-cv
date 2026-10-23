@@ -473,3 +473,10 @@ html[data-theme="luxury"] {
         margin: 32px 0 0;
     }
 }
+
+
+.about-page-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}

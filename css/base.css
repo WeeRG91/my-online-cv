@@ -61,3 +61,35 @@ position: absolute;
 *::after {
   -webkit-tap-highlight-color: transparent;
 }
+
+
+.page-related-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-height: 32px;
+  max-width: 100%;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  text-align: right;
+}
+
+.page-related-link > span[aria-hidden="true"] {
+  flex-shrink: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-related-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.page-related-link:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 4px;
+}

@@ -70,6 +70,9 @@ const translations = {
     "hero.aboutLink": "About me",
     "hero.experienceLink": "My experience",
 
+    "experience.backgroundLink": "More about my background",
+    "about.skillsLink": "Explore my skills",
+
     "nav.home": "Home",
     "nav.about": "About me",
     "nav.projects": "Projects",
@@ -168,12 +171,15 @@ const translations = {
       "Je combine mes cours particuliers en journée avec des études en soirée en bachelier en informatique, orientation développement d’applications, à l’EAFC-Sudlux à Arlon, en Belgique.",
 
     "hero.greeting": "Bonjour, je m'appelle",
-    "hero.role": "Développeur full-stack",
+    "hero.role": "Développeuse full-stack",
     "hero.description":
       "Étudiante en développement logiciel en Belgique, je recherche un stage en développement d’applications web et mobiles dans le cadre de mon projet de fin d’études. Forte d’une expérience dans l’enseignement des langues et la traduction français–thaï, j’apporte une nouvelle perspective à mon parcours dans la technologie.",
 
     "hero.aboutLink": "À propos de moi",
     "hero.experienceLink": "Mon expérience",
+
+    "experience.backgroundLink": "En savoir plus sur mon parcours",
+    "about.skillsLink": "Découvrez mes compétences",
 
     "nav.home": "Accueil",
     "nav.about": "À propos",
@@ -276,6 +282,9 @@ const translations = {
 
     "hero.aboutLink": "เกี่ยวกับฉัน",
     "hero.experienceLink": "ประสบการณ์ของฉัน",
+
+    "experience.backgroundLink": "อ่านเพิ่มเติมเกี่ยวกับฉัน",
+    "about.skillsLink": "ดูทักษะของฉัน",
 
     "nav.home": "หน้าแรก",
     "nav.about": "เกี่ยวกับฉัน",
